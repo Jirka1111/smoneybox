@@ -22,77 +22,48 @@
     <script src="application.js"></script>
 </head>
 
-<!-- define angular controller -->
-<!--<body ng-controller="MainCtrl">-->
+<body ng-controller="MainCtrl">
+    <ion-side-menus>
 
-<!--&lt;!&ndash;Hlavicka&ndash;&gt;-->
-<!--<header>-->
-    <!--<div class="bar bar-header bar-calm">-->
-        <!--<h1 class="title">sMoneybox</h1>-->
-        <!--<a href="#sidr" id="simple-menu"><button class="button icon ion-navicon"></button></a>-->
-    <!--</div>-->
-<!--</header>-->
-<!--#384856-->
-<!--&lt;!&ndash;Vlozeny obsah&ndash;&gt;-->
-<!--<div id="main" class="padding-top">-->
-    <!--<div ui-view></div>-->
-<!--</div>-->
+        <ion-side-menu-content>
+            <div class="bar bar-header bar-calm">
+                <button class="button button-icon" ng-click="toggleLeft()">
+                    <i class="icon ion-navicon-round icon-left"></i>
+                </button>
+                <h1 class="title">sMoneybox</h1>
+            </div>
+                <ion-nav-view></ion-nav-view>
+        </ion-side-menu-content>
 
-
-
-<ion-side-menus>
-
-    <!-- Center content -->
-    <ion-pane ion-side-menu-content>
-        <div class="bar bar-header bar-calm">
-            <button class="button button-icon" ng-click="toggleProjects()">
-                <i class="icon ion-navicon"></i>
-            </button>
-            <h1 class="title">sMoneybox</h1>
-            <button class="button button-icon" ng-click="newRecord()">
-                <i class="icon ion-plus icon-right"></i>
-            </button>
-        </div>
-        <ion-content has-header="true">
-            <div ui-view></div>
-        </ion-content>
-    </ion-pane>
-
-    <!-- Left menu -->
-    <ion-side-menu side="left">
-        <div class="bar bar-header bar-calm">
-            <h1 class="title">Menu</h1>
-        </div>
-        <ion-content has-header="true" scroll="false">
+        <ion-side-menu side="left">
             <ion-list>
-                <ion-item ui-sref="account" href="#account">Accounts</ion-item>
-                <ion-item ui-sref="category" href="#category">Categories</ion-item>
-                <ion-item ui-sref="record" href="#record">Records</ion-item>
-                <ion-item ui-sref="currency" href="#currency">Currencies</ion-item>
+                <ion-item ui-sref="accounts" href="#accounts">Accounts</ion-item>
+                <ion-item ui-sref="categories" href="#categories">Categories</ion-item>
+                <ion-item ui-sref="records" href="#records">Records</ion-item>
+                <ion-item ui-sref="currencies" href="#currencies">Currencies</ion-item>
             </ion-list>
-        </ion-content>
-    </ion-side-menu>
-
-</ion-side-menus>
+        </ion-side-menu>
+    </ion-side-menus>
 
 
-<!--paticka s ikonkami-->
-<footer>
-    <div class="tabs tabs-icon-left">
-        <a class="tab-item" ui-sref="index" href="#">
-            <i class="icon ion-home"></i>
-            Home
-        </a>
-        <a class="tab-item">
-            <i class="icon ion-star"></i>
-            Last 5
-        </a>
-        <a class="tab-item" ui-sref="settings" href="#settings">
-            <i class="icon ion-gear-a"></i>
-            Settings
-        </a>
-    </div>
-</footer>
+
+    <!--paticka s ikonkami-->
+    <footer>
+        <div class="tabs tabs-icon-left">
+            <a class="tab-item" ui-sref="index" href="#index">
+                <i class="icon ion-home"></i>
+                Home
+            </a>
+            <a class="tab-item">
+                <i class="icon ion-star"></i>
+                Last 5
+            </a>
+            <a class="tab-item" ui-sref="settings" href="#settings">
+                <i class="icon ion-gear-a"></i>
+                Settings
+            </a>
+        </div>
+    </footer>
 
 </body>
 

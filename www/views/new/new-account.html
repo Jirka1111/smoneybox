@@ -1,0 +1,19 @@
+<ion-header-bar class="bar-secondary bar-calm">
+    <h1 class="title">New Account</h1>
+</ion-header-bar>
+
+<!-- Modal content area -->
+<ion-content>
+
+    <form ng-submit="createAccount(account)">
+        <div class="list">
+            <label class="item item-input">
+                <input type="text" placeholder="New account" ng-model="account.title">
+            </label>
+        </div>
+        <div class="padding">
+            <button type="submit" class="button button-block button-calm">Create Account</button>
+        </div>
+    </form>
+
+</ion-content>

@@ -1,0 +1,19 @@
+<ion-header-bar class="bar-secondary bar-calm">
+    <h1 class="title">New Category</h1>
+</ion-header-bar>
+
+<!-- Modal content area -->
+<ion-content>
+
+    <form ng-submit="createCategory(category)">
+        <div class="list">
+            <label class="item item-input">
+                <input type="text" placeholder="New category" ng-model="category.title">
+            </label>
+        </div>
+        <div class="padding">
+            <button type="submit" class="button button-block button-calm">Create Category</button>
+        </div>
+    </form>
+
+</ion-content>

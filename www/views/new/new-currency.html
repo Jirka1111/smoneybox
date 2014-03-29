@@ -1,0 +1,19 @@
+<ion-header-bar class="bar-secondary bar-calm">
+    <h1 class="title">New Currency</h1>
+</ion-header-bar>
+
+<!-- Modal content area -->
+<ion-content>
+
+    <form ng-submit="createCurrency(currency)">
+        <div class="list">
+            <label class="item item-input">
+                <input type="text" placeholder="New currency" ng-model="currency.title">
+            </label>
+        </div>
+        <div class="padding">
+            <button type="submit" class="button button-block button-calm">Create Currency</button>
+        </div>
+    </form>
+
+</ion-content>

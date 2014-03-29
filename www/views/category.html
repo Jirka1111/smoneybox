@@ -1,16 +1,31 @@
-<div class="list padding-top">
-    <label class="item item-input item-stacked-label">
-        <span class="input-label htitle">Categories</span>
-    </label>
-    <label class="item item-input item-stacked-label">
-        <span class="input-label">Title</span>
-        <input type="text" placeholder="Toys category">
-    </label>
+<!--<ion-view title="navTitle" hide-back-button="true" left-buttons="leftButtons" right-buttons="rightButtons"-->
+          <!--hide-back-button="true">-->
 
-    <label class="item item-input item-stacked-label">
-        <span class="input-label">Description</span>
-        <input type="text" placeholder="Category for purchasing toys">
-    </label>
+    <!--<ion-content has-header="true" padding="true">-->
+        <!--<label class="item item-input item-stacked-label">-->
+            <!--<span class="input-label htitle">Categories</span>-->
+        <!--</label>-->
+        <!--<label class="item item-input item-stacked-label">-->
+            <!--<span class="input-label">Title</span>-->
+            <!--<input type="text" placeholder="Toys category">-->
+        <!--</label>-->
 
-    <button class="button button-calm col col-33 col-offset-33">Submit</button>
-</div>
+        <!--<label class="item item-input item-stacked-label">-->
+            <!--<span class="input-label">Description</span>-->
+            <!--<input type="text" placeholder="Category for purchasing toys">-->
+        <!--</label>-->
+
+        <!--<button class="button button-calm col col-33 col-offset-33">Submit</button>-->
+    <!--</ion-content>-->
+
+<!--</ion-view>-->
+
+<ion-header-bar class="bar-secondary bar-calm">
+    <button class="button button-icon" ng-click="toggleLeft()">
+        <i class="icon ion-navicon-round icon-left"></i>
+    </button>
+    <h1 class="title">Categories</h1>
+    <button class="button button-icon" ui-sref="new-category" href="#new-category">
+        <i class="icon ion-plus icon-right"></i>
+    </button>
+</ion-header-bar>
