@@ -1,23 +1,9 @@
-<!--<div class="list padding-top">-->
-    <!--<label class="item item-input item-stacked-label">-->
-        <!--<span class="input-label htitle">Records</span>-->
-    <!--</label>-->
-    <!--<label class="item item-input item-stacked-label">-->
-        <!--<span class="input-label">Title</span>-->
-        <!--<input type="text" placeholder="RC model">-->
-    <!--</label>-->
-
-    <!--<label class="item item-input item-stacked-label">-->
-        <!--<span class="input-label">Description</span>-->
-        <!--<input type="text" placeholder="Audi with 4x4 - wireless">-->
-    <!--</label>-->
-
-    <!--<button class="button button-calm col col-33 col-offset-33">Submit</button>-->
-<!--</div>-->
-
 <ion-header-bar class="bar-secondary bar-calm">
+    <button class="button button-icon" ng-click="toggleLeft()">
+        <i class="icon ion-navicon-round icon-left"></i>
+    </button>
     <h1 class="title">Records</h1>
-    <button class="button button-icon" ui-sref="new-record" href="#new-record">
+    <button class="button button-icon" ng-click="newRecord()">
         <i class="icon ion-plus icon-right"></i>
     </button>
 </ion-header-bar>

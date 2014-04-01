@@ -10,22 +10,10 @@ app.config(function($stateProvider, $urlRouterProvider) {
             controller  : 'MainCtrl'
         })
 
-        .state('new-account', {
-            url: '/new-account',
-            templateUrl : '/views/new/new-account.html',
-            controller  : 'AccountCtrl'
-        })
-
         .state('accounts', {
             url: '/accounts',
             templateUrl : '/views/accounts.html',
             controller  : 'AccountCtrl'
-        })
-
-        .state('new-category', {
-            url: '/new-category',
-            templateUrl : '/views/new/new-category.html',
-            controller  : 'CategoryCtrl'
         })
 
         .state('categories', {
@@ -34,22 +22,10 @@ app.config(function($stateProvider, $urlRouterProvider) {
             controller  : 'CategoryCtrl'
         })
 
-        .state('new-record', {
-            url: '/new-record',
-            templateUrl : '/views/new/new-record.html',
-            controller  : 'RecordCtrl'
-        })
-
         .state('records', {
             url: '/records',
             templateUrl : '/views/record.html',
             controller  : 'RecordCtrl'
-        })
-
-        .state('new-currency', {
-            url: '/new-currency',
-            templateUrl : '/views/new/new-currency.html',
-            controller  : 'CurrencyCtrl'
         })
 
         .state('currencies', {
@@ -124,6 +100,7 @@ app.controller('CategoryCtrl', function($scope, $ionicModal) {
         $scope.categories.push({
             title: category.title
         });
+        $scope.category.save();
         $scope.categoryModal.hide();
         category.title = "";
     };
