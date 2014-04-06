@@ -83,9 +83,9 @@ app.controller('AccountCtrl', function($scope, $ionicModal) {
     $scope.closeNewAccount = function() {
         $scope.accountModal.hide();
     };
-    
+
     $scope.deleteAccount = function(account) {
-        $scope.items.splice($scope.accounts.indexOf(account), 1);
+        $scope.accounts.splice($scope.accounts.indexOf(account), 1);
     };
 });
 
@@ -121,6 +121,10 @@ app.controller('CategoryCtrl', function($scope, $ionicModal) {
     $scope.closeNewCategory = function() {
         $scope.categoryModal.hide();
     };
+
+    $scope.deleteCategory = function(category) {
+        $scope.categories.splice($scope.categories.indexOf(category), 1);
+    };
 });
 
 app.controller('RecordCtrl', function($scope, $ionicModal) {
@@ -155,6 +159,10 @@ app.controller('RecordCtrl', function($scope, $ionicModal) {
     $scope.closeNewRecord = function() {
         $scope.recordModal.hide();
     };
+
+    $scope.deleteRecord = function(record) {
+        $scope.records.splice($scope.records.indexOf(record), 1);
+    };
 });
 
 app.controller('CurrencyCtrl', function($scope, $ionicModal) {
@@ -188,6 +196,10 @@ app.controller('CurrencyCtrl', function($scope, $ionicModal) {
     // Close the new task modal
     $scope.closeNewCurrency = function() {
         $scope.currencyModal.hide();
+    };
+
+    $scope.deleteCurrency = function(currency) {
+        $scope.currencies.splice($scope.currencies.indexOf(currency), 1);
     };
 });
 
