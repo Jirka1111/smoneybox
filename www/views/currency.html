@@ -7,3 +7,14 @@
         <i class="icon ion-plus icon-right"></i>
     </button>
 </ion-header-bar>
+
+<ion-content>
+    <!-- our list and list items -->
+    <ion-list>
+      <ion-item ng-repeat="currency in currencies">
+        {{currency.title}}
+          <h6>{{currency.description}}</h6>
+        <ion-option-button class="button-assertive" ng-click="deleteCurrency(currency)">Delete</ion-option-button>
+      </ion-item>
+    </ion-list>
+</ion-content>

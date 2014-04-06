@@ -66,10 +66,12 @@ app.controller('AccountCtrl', function($scope, $ionicModal) {
     // Called when the form is submitted
     $scope.createAccount = function(account) {
         $scope.accounts.push({
-            title: account.title
+            title: account.title,
+            description: account.description
         });
         $scope.accountModal.hide();
         account.title = "";
+        account.description = "";
     };
 
     // Open our new task modal
@@ -80,6 +82,10 @@ app.controller('AccountCtrl', function($scope, $ionicModal) {
     // Close the new task modal
     $scope.closeNewAccount = function() {
         $scope.accountModal.hide();
+    };
+    
+    $scope.deleteAccount = function(account) {
+        $scope.items.splice($scope.accounts.indexOf(account), 1);
     };
 });
 
@@ -98,11 +104,12 @@ app.controller('CategoryCtrl', function($scope, $ionicModal) {
     // Called when the form is submitted
     $scope.createCategory = function(category) {
         $scope.categories.push({
-            title: category.title
+            title: category.title,
+            description: category.description
         });
-        $scope.category.save();
         $scope.categoryModal.hide();
         category.title = "";
+        category.description = "";
     };
 
     // Open our new task modal
@@ -130,11 +137,13 @@ app.controller('RecordCtrl', function($scope, $ionicModal) {
 
     // Called when the form is submitted
     $scope.createRecord = function(record) {
-        $scope.categories.push({
-            title: record.title
+        $scope.records.push({
+            title: record.title,
+            description: record.description
         });
         $scope.recordModal.hide();
         record.title = "";
+        record.description = "";
     };
 
     // Open our new task modal
@@ -163,10 +172,12 @@ app.controller('CurrencyCtrl', function($scope, $ionicModal) {
     // Called when the form is submitted
     $scope.createCurrency = function(currency) {
         $scope.currencies.push({
-            title: currency.title
+            title: currency.title,
+            description: currency.description
         });
         $scope.currencyModal.hide();
         currency.title = "";
+        currency.description = "";
     };
 
     // Open our new task modal
