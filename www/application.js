@@ -202,8 +202,8 @@ app.controller('CurrencyCtrl', function($scope, $ionicModal, $firebase) {
         $scope.currencyModal.hide();
     };
 
-    $scope.deleteRecord = function(id) {
-        $scope.records.$remove(id);
+    $scope.deleteCurrency = function(id) {
+        $scope.currencies.$remove(id);
     };
     $scope.currencies = $firebase(currenciesFire);
 });
