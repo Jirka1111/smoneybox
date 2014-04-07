@@ -1,4 +1,5 @@
 var app = angular.module('app', ['ionic', 'firebase']);
+var url = 'https://smoneybox.firebaseio.com';
 
 // configure our routes
 app.config(function($stateProvider, $urlRouterProvider) {
@@ -53,12 +54,7 @@ app.controller('MainCtrl', function($scope, $ionicSideMenuDelegate) {
 
 app.controller('AccountCtrl', function($scope, $ionicModal, $firebase) {
 
-    var url = 'https://smoneybox.firebaseio.com/';
-    var fireRef = new Firebase(url);
-
-//    $scope.accounts = [];
-
-
+    var accountsFire = new Firebase(url + "/" + "accounts");
 
     // Create and load the Modal
     $ionicModal.fromTemplateUrl('views/new/new-account.html', function(modal) {
@@ -70,13 +66,9 @@ app.controller('AccountCtrl', function($scope, $ionicModal, $firebase) {
 
     // Called when the form is submitted
     $scope.createAccount = function(account) {
-//        $scope.accounts.push({
-//            title: account.title,
-//            description: account.description
-//        });
         $scope.accounts.$add({
            title: account.title,
-            description: account.description
+           description: account.description
         });
         $scope.accountModal.hide();
         account.title = "";
@@ -93,15 +85,15 @@ app.controller('AccountCtrl', function($scope, $ionicModal, $firebase) {
         $scope.accountModal.hide();
     };
 
-    $scope.deleteAccount = function(account) {
-        $scope.accounts.splice($scope.accounts.indexOf(account), 1);
+    $scope.deleteAccount = function(id) {
+        $scope.accounts.$remove(id);
     };
-    $scope.accounts = $firebase(fireRef);
+    $scope.accounts = $firebase(accountsFire);
 });
 
 app.controller('CategoryCtrl', function($scope, $ionicModal, $firebase) {
-    // No need for testing data anymore
-    $scope.categories = [];
+
+    var categoriesFire = new Firebase(url + "/" + "categories");
 
     // Create and load the Modal
     $ionicModal.fromTemplateUrl('views/new/new-category.html', function(modal) {
@@ -113,7 +105,7 @@ app.controller('CategoryCtrl', function($scope, $ionicModal, $firebase) {
 
     // Called when the form is submitted
     $scope.createCategory = function(category) {
-        $scope.categories.push({
+        $scope.categories.$add({
             title: category.title,
             description: category.description
         });
@@ -132,14 +124,15 @@ app.controller('CategoryCtrl', function($scope, $ionicModal, $firebase) {
         $scope.categoryModal.hide();
     };
 
-    $scope.deleteCategory = function(category) {
-        $scope.categories.splice($scope.categories.indexOf(category), 1);
+    $scope.deleteCategory = function(id) {
+        $scope.categories.$remove(id);
     };
+    $scope.categories = $firebase(categoriesFire);
 });
 
 app.controller('RecordCtrl', function($scope, $ionicModal, $firebase) {
-    // No need for testing data anymore
-    $scope.records = [];
+
+    var recordsFire = new Firebase(url + "/" + "records");
 
     // Create and load the Modal
     $ionicModal.fromTemplateUrl('views/new/new-record.html', function(modal) {
@@ -151,7 +144,7 @@ app.controller('RecordCtrl', function($scope, $ionicModal, $firebase) {
 
     // Called when the form is submitted
     $scope.createRecord = function(record) {
-        $scope.records.push({
+        $scope.records.$add({
             title: record.title,
             description: record.description
         });
@@ -170,14 +163,15 @@ app.controller('RecordCtrl', function($scope, $ionicModal, $firebase) {
         $scope.recordModal.hide();
     };
 
-    $scope.deleteRecord = function(record) {
-        $scope.records.splice($scope.records.indexOf(record), 1);
+    $scope.deleteRecord = function(id) {
+        $scope.records.$remove(id);
     };
+    $scope.records = $firebase(recordsFire);
 });
 
 app.controller('CurrencyCtrl', function($scope, $ionicModal, $firebase) {
-    // No need for testing data anymore
-    $scope.currencies = [];
+
+    var currenciesFire = new Firebase(url + "/" + "currencies");
 
     // Create and load the Modal
     $ionicModal.fromTemplateUrl('views/new/new-currency.html', function(modal) {
@@ -189,7 +183,7 @@ app.controller('CurrencyCtrl', function($scope, $ionicModal, $firebase) {
 
     // Called when the form is submitted
     $scope.createCurrency = function(currency) {
-        $scope.currencies.push({
+        $scope.currencies.$add({
             title: currency.title,
             description: currency.description
         });
@@ -208,9 +202,10 @@ app.controller('CurrencyCtrl', function($scope, $ionicModal, $firebase) {
         $scope.currencyModal.hide();
     };
 
-    $scope.deleteCurrency = function(currency) {
-        $scope.currencies.splice($scope.currencies.indexOf(currency), 1);
+    $scope.deleteRecord = function(id) {
+        $scope.records.$remove(id);
     };
+    $scope.currencies = $firebase(currenciesFire);
 });
 
 app.controller('SettingsCtrl', function($scope) {

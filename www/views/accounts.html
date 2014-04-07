@@ -14,7 +14,7 @@
       <ion-item ng-repeat="account in accounts">
         {{account.title}}
           <h6>{{account.description}}</h6>
-        <ion-option-button class="button-assertive" ng-click="deleteAccount(account)">Delete</ion-option-button>
+        <ion-option-button class="button-assertive" ng-click="deleteAccount($index)">Delete</ion-option-button>
       </ion-item>
     </ion-list>
 </ion-content>
