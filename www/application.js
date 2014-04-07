@@ -1,4 +1,4 @@
-var app = angular.module('app', ['ionic']);
+var app = angular.module('app', ['ionic', 'firebase']);
 
 // configure our routes
 app.config(function($stateProvider, $urlRouterProvider) {
@@ -51,9 +51,14 @@ app.controller('MainCtrl', function($scope, $ionicSideMenuDelegate) {
     };
 });
 
-app.controller('AccountCtrl', function($scope, $ionicModal) {
-    // No need for testing data anymore
-    $scope.accounts = [];
+app.controller('AccountCtrl', function($scope, $ionicModal, $firebase) {
+
+    var url = 'https://smoneybox.firebaseio.com/';
+    var fireRef = new Firebase(url);
+
+//    $scope.accounts = [];
+
+
 
     // Create and load the Modal
     $ionicModal.fromTemplateUrl('views/new/new-account.html', function(modal) {
@@ -65,8 +70,12 @@ app.controller('AccountCtrl', function($scope, $ionicModal) {
 
     // Called when the form is submitted
     $scope.createAccount = function(account) {
-        $scope.accounts.push({
-            title: account.title,
+//        $scope.accounts.push({
+//            title: account.title,
+//            description: account.description
+//        });
+        $scope.accounts.$add({
+           title: account.title,
             description: account.description
         });
         $scope.accountModal.hide();
@@ -87,9 +96,10 @@ app.controller('AccountCtrl', function($scope, $ionicModal) {
     $scope.deleteAccount = function(account) {
         $scope.accounts.splice($scope.accounts.indexOf(account), 1);
     };
+    $scope.accounts = $firebase(fireRef);
 });
 
-app.controller('CategoryCtrl', function($scope, $ionicModal) {
+app.controller('CategoryCtrl', function($scope, $ionicModal, $firebase) {
     // No need for testing data anymore
     $scope.categories = [];
 
@@ -127,7 +137,7 @@ app.controller('CategoryCtrl', function($scope, $ionicModal) {
     };
 });
 
-app.controller('RecordCtrl', function($scope, $ionicModal) {
+app.controller('RecordCtrl', function($scope, $ionicModal, $firebase) {
     // No need for testing data anymore
     $scope.records = [];
 
@@ -165,7 +175,7 @@ app.controller('RecordCtrl', function($scope, $ionicModal) {
     };
 });
 
-app.controller('CurrencyCtrl', function($scope, $ionicModal) {
+app.controller('CurrencyCtrl', function($scope, $ionicModal, $firebase) {
     // No need for testing data anymore
     $scope.currencies = [];
 
