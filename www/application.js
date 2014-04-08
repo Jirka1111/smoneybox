@@ -6,8 +6,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
     $stateProvider
 
         .state('index', {
-            url: '/index.html',
-            templateUrl : '/index.html',
+            url: '/index',
             controller  : 'MainCtrl'
         })
 
@@ -40,7 +39,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
             templateUrl : '/views/settings.html',
             controller  : 'SettingsCtrl'
         });
-    $urlRouterProvider.otherwise("/index");
+    $urlRouterProvider.otherwise('/index');
 });
 
 
@@ -111,7 +110,8 @@ app.controller('CategoryCtrl', function($scope, $ionicModal, $firebase) {
     $scope.createCategory = function(category) {
         $scope.categories.$add({
             title: category.title,
-            description: category.description
+            description: category.description,
+            account: category.account
         });
         $scope.categoryModal.hide();
         category.title = "";
