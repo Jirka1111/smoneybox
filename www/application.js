@@ -88,6 +88,10 @@ app.controller('AccountCtrl', function($scope, $ionicModal, $firebase) {
     $scope.deleteAccount = function(id) {
         $scope.accounts.$remove(id);
     };
+
+    $scope.editAccount = function(id){
+        $scope.accounts.$update(id);
+    };
     $scope.accounts = $firebase(accountsFire);
 });
 
