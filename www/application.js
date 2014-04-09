@@ -84,13 +84,10 @@ app.controller('AccountCtrl', function($scope, $ionicModal, $firebase) {
         $scope.accountModal.hide();
     };
 
-    $scope.deleteAccount = function(id) {
-        $scope.accounts.$remove(id);
+    $scope.deleteAccount = function(key) {
+        $scope.accounts.$remove(key);
     };
 
-    $scope.editAccount = function(id){
-        $scope.accounts.$update(id);
-    };
     $scope.accounts = $firebase(accountsFire);
 });
 
@@ -128,8 +125,8 @@ app.controller('CategoryCtrl', function($scope, $ionicModal, $firebase) {
         $scope.categoryModal.hide();
     };
 
-    $scope.deleteCategory = function(id) {
-        $scope.categories.$remove(id);
+    $scope.deleteCategory = function(key) {
+        $scope.categories.$remove(key);
     };
     $scope.categories = $firebase(categoriesFire);
 });
@@ -167,8 +164,8 @@ app.controller('RecordCtrl', function($scope, $ionicModal, $firebase) {
         $scope.recordModal.hide();
     };
 
-    $scope.deleteRecord = function(id) {
-        $scope.records.$remove(id);
+    $scope.deleteRecord = function(key) {
+        $scope.records.$remove(key);
     };
     $scope.records = $firebase(recordsFire);
 });
@@ -206,8 +203,8 @@ app.controller('CurrencyCtrl', function($scope, $ionicModal, $firebase) {
         $scope.currencyModal.hide();
     };
 
-    $scope.deleteCurrency = function(id) {
-        $scope.currencies.$remove(id);
+    $scope.deleteCurrency = function(key) {
+        $scope.currencies.$remove(key);
     };
     $scope.currencies = $firebase(currenciesFire);
 });
