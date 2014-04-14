@@ -1,0 +1,28 @@
+<div class="modal">
+
+    <!-- Modal header bar -->
+    <ion-header-bar class="bar-secondary">
+        <h1 class="title">Update Currency</h1>
+        <button class="button button-clear button-positive" ng-click="closeUpdateCurrency()">Cancel</button>
+    </ion-header-bar>
+
+    <!-- Modal content area -->
+    <ion-content>
+
+        <form ng-submit="updateCurrency(currency)">
+            <div class="list">
+                <label class="item item-input">
+                    <input type="text" placeholder="Name of the currency" ng-model="currency.title">
+                </label>
+                <label class="item item-input">
+                    <input type="text" placeholder="Description" ng-model="currency.description">
+                </label>
+            </div>
+            <div class="padding">
+                <button type="submit" class="button button-block button-positive">Update Currency</button>
+            </div>
+        </form>
+
+    </ion-content>
+
+</div>

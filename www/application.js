@@ -51,13 +51,21 @@ app.controller('MainCtrl', function($scope, $ionicSideMenuDelegate) {
     };
 });
 
+
 app.controller('AccountCtrl', function($scope, $ionicModal, $firebase) {
 
-    var accountsFire = new Firebase(url + "/" + "accounts");
+    var accountsFire = new Firebase(url + "/" + "accounts" );
 
     // Create and load the Modal
     $ionicModal.fromTemplateUrl('views/new/new-account.html', function(modal) {
-        $scope.accountModal = modal;
+        $scope.newAccountModal = modal;
+    }, {
+        scope: $scope,
+        animation: 'slide-in-up'
+    });
+
+    $ionicModal.fromTemplateUrl('views/update/update-account.html', function(modal) {
+        $scope.updateAccountModal = modal;
     }, {
         scope: $scope,
         animation: 'slide-in-up'
@@ -66,26 +74,45 @@ app.controller('AccountCtrl', function($scope, $ionicModal, $firebase) {
     // Called when the form is submitted
     $scope.createAccount = function(account) {
         $scope.accounts.$add({
-           title: account.title,
-           description: account.description
+            title: account.title,
+            description: account.description
         });
-        $scope.accountModal.hide();
+        $scope.newAccountModal.hide();
         account.title = "";
         account.description = "";
     };
 
     // Open our new task modal
     $scope.newAccount = function() {
-        $scope.accountModal.show();
+        $scope.newAccountModal.show();
     };
 
     // Close the new task modal
     $scope.closeNewAccount = function() {
-        $scope.accountModal.hide();
+        $scope.newAccountModal.hide();
     };
 
     $scope.deleteAccount = function(key) {
         $scope.accounts.$remove(key);
+    };
+
+    $scope.editAccount = function(key, account){
+        $scope.updateAccountModal.show();
+    };
+
+    $scope.closeUpdateAccount = function(){
+        $scope.updateAccountModal.hide();
+    };
+
+    $scope.updateAccount = function(key, account){
+        $scope.accounts.$remove(key);
+        $scope.accounts.$add({
+            title: account.title,
+            description: account.description
+        });
+        $scope.updateAccountModal.hide();
+        account.title = "";
+        account.description = "";
     };
 
     $scope.accounts = $firebase(accountsFire);
