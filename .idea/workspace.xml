@@ -23,19 +23,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="accounts.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/views/accounts.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="71" selection-start="635" selection-end="635" vertical-scroll-proportion="-10.0" vertical-offset="0" max-vertical-offset="390">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="application.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="application.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/application.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="100" column="6" selection-start="2698" selection-end="2698" vertical-scroll-proportion="0.37645108" vertical-offset="1273" max-vertical-offset="3720">
+            <state line="213" column="41" selection-start="5852" selection-end="5852" vertical-scroll-proportion="0.0" vertical-offset="2799" max-vertical-offset="4020">
               <folding />
             </state>
           </provider>
@@ -44,16 +35,25 @@
       <file leaf-file-name="new-account.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/views/new/new-account.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="106" selection-start="551" selection-end="551" vertical-scroll-proportion="-8.75" vertical-offset="0" max-vertical-offset="495">
+            <state line="18" column="24" selection-start="747" selection-end="747" vertical-scroll-proportion="-11.25" vertical-offset="0" max-vertical-offset="615">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="update-account.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/views/update/update-account.html">
+      <file leaf-file-name="new-record.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/www/views/new/new-record.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="67" selection-start="523" selection-end="523" vertical-scroll-proportion="-8.75" vertical-offset="0" max-vertical-offset="495">
+            <state line="17" column="24" selection-start="647" selection-end="647" vertical-scroll-proportion="-9.958333" vertical-offset="16" max-vertical-offset="675">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="new-category.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/www/views/new/new-category.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="19" column="52" selection-start="806" selection-end="806" vertical-scroll-proportion="0.49222797" vertical-offset="0" max-vertical-offset="675">
               <folding />
             </state>
           </provider>
@@ -62,7 +62,7 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="58" selection-start="872" selection-end="872" vertical-scroll-proportion="-12.5" vertical-offset="0" max-vertical-offset="1155">
+            <state line="18" column="47" selection-start="699" selection-end="699" vertical-scroll-proportion="-11.25" vertical-offset="0" max-vertical-offset="1095">
               <folding />
             </state>
           </provider>
@@ -78,20 +78,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/www/views/category.html" />
         <option value="$PROJECT_DIR$/www/views/record.html" />
-        <option value="$PROJECT_DIR$/www/views/currency.html" />
-        <option value="$PROJECT_DIR$/www/views/new/new-category.html" />
         <option value="$PROJECT_DIR$/www/views/update/update-currency.html" />
         <option value="$PROJECT_DIR$/www/views/update/update-category.html" />
         <option value="$PROJECT_DIR$/www/views/update/update-record.html" />
         <option value="$PROJECT_DIR$/www/controllers/accounts.js" />
         <option value="$PROJECT_DIR$/www/controllers/services/account.js" />
-        <option value="$PROJECT_DIR$/www/index.html" />
-        <option value="$PROJECT_DIR$/www/views/new/new-account.html" />
         <option value="$PROJECT_DIR$/www/views/accounts.html" />
         <option value="$PROJECT_DIR$/www/views/update/update-account.html" />
+        <option value="$PROJECT_DIR$/www/views/category.html" />
+        <option value="$PROJECT_DIR$/www/views/currency.html" />
+        <option value="$PROJECT_DIR$/www/views/new/new-currency.html" />
+        <option value="$PROJECT_DIR$/www/views/new/new-account.html" />
         <option value="$PROJECT_DIR$/www/application.js" />
+        <option value="$PROJECT_DIR$/www/views/new/new-record.html" />
+        <option value="$PROJECT_DIR$/www/index.html" />
+        <option value="$PROJECT_DIR$/www/views/new/new-category.html" />
       </list>
     </option>
   </component>
@@ -286,15 +288,15 @@
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24907063" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24758364" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -321,6 +323,18 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/www/views/update/update-account.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="67" selection-start="523" selection-end="523" vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="495" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="58" selection-start="872" selection-end="872" vertical-scroll-proportion="0.0" vertical-offset="300" max-vertical-offset="1155">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/www/views/accounts.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="17" column="71" selection-start="731" selection-end="731" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="390">
@@ -337,16 +351,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/www/views/update/update-account.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="47" selection-start="369" selection-end="369" vertical-scroll-proportion="0.0" vertical-offset="165" max-vertical-offset="495">
-          <folding />
-        </state>
+        <state line="11" column="47" selection-start="369" selection-end="369" vertical-scroll-proportion="0.0" vertical-offset="165" max-vertical-offset="495" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/views/new/new-account.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="106" selection-start="551" selection-end="551" vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="495">
-          <folding />
-        </state>
+        <state line="14" column="106" selection-start="551" selection-end="551" vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="495" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/views/accounts.html">
@@ -365,9 +375,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/www/views/update/update-account.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="93" selection-start="544" selection-end="544" vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="495">
-          <folding />
-        </state>
+        <state line="14" column="93" selection-start="544" selection-end="544" vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="495" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/views/accounts.html">
@@ -386,9 +394,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/www/views/update/update-account.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="93" selection-start="544" selection-end="544" vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="495">
-          <folding />
-        </state>
+        <state line="14" column="93" selection-start="544" selection-end="544" vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="495" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/application.js">
@@ -549,21 +555,6 @@
         <state line="13" column="40" selection-start="469" selection-end="469" vertical-scroll-proportion="0.33678755" vertical-offset="0" max-vertical-offset="579" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/views/currency.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="42" selection-start="476" selection-end="476" vertical-scroll-proportion="0.33678755" vertical-offset="0" max-vertical-offset="579" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/views/category.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="80" selection-start="644" selection-end="644" vertical-scroll-proportion="-10.0" vertical-offset="0" max-vertical-offset="375" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/views/new/new-category.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="24" selection-start="745" selection-end="745" vertical-scroll-proportion="-11.25" vertical-offset="0" max-vertical-offset="495" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/views/update/update-currency.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="4" column="32" selection-start="126" selection-end="126" vertical-scroll-proportion="0.103626944" vertical-offset="0" max-vertical-offset="579" />
@@ -579,37 +570,72 @@
         <state line="21" column="88" selection-start="881" selection-end="881" vertical-scroll-proportion="0.54404145" vertical-offset="0" max-vertical-offset="579" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="58" selection-start="872" selection-end="872" vertical-scroll-proportion="-12.5" vertical-offset="0" max-vertical-offset="1155">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/views/new/new-account.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="106" selection-start="551" selection-end="551" vertical-scroll-proportion="-8.75" vertical-offset="0" max-vertical-offset="495">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/views/update/update-account.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="67" selection-start="523" selection-end="523" vertical-scroll-proportion="-8.75" vertical-offset="0" max-vertical-offset="495">
+        <state line="11" column="39" selection-start="361" selection-end="361" vertical-scroll-proportion="0.0" vertical-offset="165" max-vertical-offset="495">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/views/accounts.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="71" selection-start="635" selection-end="635" vertical-scroll-proportion="-10.0" vertical-offset="0" max-vertical-offset="390">
+        <state line="13" column="51" selection-start="482" selection-end="482" vertical-scroll-proportion="0.0" vertical-offset="195" max-vertical-offset="390">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/views/category.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="35" selection-start="728" selection-end="728" vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="435">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/views/currency.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="34" selection-start="554" selection-end="554" vertical-scroll-proportion="0.38860103" vertical-offset="0" max-vertical-offset="579">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/views/new/new-currency.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="47" selection-start="448" selection-end="448" vertical-scroll-proportion="0.33678755" vertical-offset="0" max-vertical-offset="579">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/views/new/new-account.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="24" selection-start="747" selection-end="747" vertical-scroll-proportion="-11.25" vertical-offset="0" max-vertical-offset="615">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/application.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="100" column="6" selection-start="2698" selection-end="2698" vertical-scroll-proportion="0.37645108" vertical-offset="1273" max-vertical-offset="3720">
+        <state line="213" column="41" selection-start="5852" selection-end="5852" vertical-scroll-proportion="0.0" vertical-offset="2799" max-vertical-offset="4020">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/views/new/new-record.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="24" selection-start="647" selection-end="647" vertical-scroll-proportion="-9.958333" vertical-offset="16" max-vertical-offset="675">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="47" selection-start="699" selection-end="699" vertical-scroll-proportion="-11.25" vertical-offset="0" max-vertical-offset="1095">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/views/new/new-category.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="52" selection-start="806" selection-end="806" vertical-scroll-proportion="0.49222797" vertical-offset="0" max-vertical-offset="675">
           <folding />
         </state>
       </provider>

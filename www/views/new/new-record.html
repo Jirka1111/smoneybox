@@ -12,11 +12,23 @@
         <form ng-submit="createRecord(record)">
             <div class="list">
                 <label class="item item-input">
-                    <input type="text" placeholder="Name of the currency" ng-model="record.title">
+                    <input type="text" placeholder="Name of the currency" ng-model="record.amount" required>
+                </label>
+                <label class="item item-input">
+                    Date
+                    <input type="datetime-local" placeholder="Date" ng-model="record.date">
                 </label>
                 <label class="item item-input">
                     <input type="text" placeholder="Description" ng-model="record.description">
                 </label>
+                <div class="item item-input item-select">
+                    <div class="input-label">
+                        Category:
+                    </div>
+                    <select>
+                        <option ng-repeat="category in categories">{{category.title}}</option>
+                    </select>
+                </div>
             </div>
             <div class="padding">
                 <button type="submit" class="button button-block button-positive">Create Record</button>

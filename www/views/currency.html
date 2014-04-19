@@ -14,6 +14,7 @@
       <ion-item ng-repeat="(key, currency) in currencies">
         {{currency.title}}
           <h6>{{currency.description}}</h6>
+        <ion-option-button class="button-assertive" ng-click="updateCurrency(key)">Update</ion-option-button>
         <ion-option-button class="button-assertive" ng-click="deleteCurrency(key)">Delete</ion-option-button>
       </ion-item>
     </ion-list>

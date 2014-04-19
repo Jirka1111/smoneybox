@@ -9,13 +9,13 @@
     <!-- Modal content area -->
     <ion-content>
 
-        <form ng-submit="updateAccount(key, account)">
+        <form ng-submit="updateAccount()">
             <div class="list">
                 <label class="item item-input">
-                    <input type="text" placeholder="{{account.title" ng-model="account.title">
+                    <input type="text" placeholder="{{current_account.title}}" ng-model="account.title">
                 </label>
                 <label class="item item-input">
-                    <input type="text" placeholder="{{account.description}}" ng-model="account.description">
+                    <input type="text" placeholder="{{current_account.description}}" ng-model="account.description">
                 </label>
             </div>
             <div class="padding">

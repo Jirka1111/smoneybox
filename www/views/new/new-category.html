@@ -12,12 +12,24 @@
         <form ng-submit="createCategory(category)">
             <div class="list">
                 <label class="item item-input">
-                    <input type="text" placeholder="Name of the category" ng-model="category.title">
+                    <input type="text" placeholder="Name of the category" ng-model="category.name" required>
                 </label>
                 <label class="item item-input">
                     <input type="text" placeholder="Description" ng-model="category.description">
                 </label>
+                <input class="color" value="66ff00">
+                <div class="item item-input item-select">
+                    <div class="input-label">
+                        Account:
+                    </div>
+                    <select>
+                        <option ng-repeat="account in accounts">{{account.title}}</option>
+                    </select>
+                </div>
             </div>
+
+
+
             <div class="padding">
                 <button type="submit" class="button button-block button-positive">Create Category</button>
             </div>

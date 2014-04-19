@@ -1,8 +1,12 @@
 var app = angular.module('app', ['ionic', 'firebase']);
 var url = 'https://smoneybox.firebaseio.com';
+var accountsFire = new Firebase(url + "/" + "accounts" );
+var categoriesFire = new Firebase(url + "/" + "categories");
+var recordsFire = new Firebase(url + "/" + "records");
+var currenciesFire = new Firebase(url + "/" + "currencies");
 
 // configure our routes
-app.config(function($stateProvider, $urlRouterProvider) {
+app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
     $stateProvider
 
         .state('index', {
@@ -40,6 +44,22 @@ app.config(function($stateProvider, $urlRouterProvider) {
             controller  : 'SettingsCtrl'
         });
     $urlRouterProvider.otherwise('/index');
+}]);
+
+app.factory("DataFactory", function($firebase){
+    return{
+        accounts:
+            accounts = $firebase(accountsFire)
+        ,
+        categories:
+            categories = $firebase(categoriesFire)
+        ,
+        records:
+            records = $firebase(recordsFire)
+        ,
+        currencies:
+            currencies = $firebase(currenciesFire)
+    }
 });
 
 
@@ -52,9 +72,7 @@ app.controller('MainCtrl', function($scope, $ionicSideMenuDelegate) {
 });
 
 
-app.controller('AccountCtrl', function($scope, $ionicModal, $firebase) {
-
-    var accountsFire = new Firebase(url + "/" + "accounts" );
+app.controller('AccountCtrl', function($scope, $ionicModal, DataFactory) {
 
     // Create and load the Modal
     $ionicModal.fromTemplateUrl('views/new/new-account.html', function(modal) {
@@ -74,8 +92,9 @@ app.controller('AccountCtrl', function($scope, $ionicModal, $firebase) {
     // Called when the form is submitted
     $scope.createAccount = function(account) {
         $scope.accounts.$add({
-            title: account.title,
-            description: account.description
+            name: account.name,
+            description: account.description,
+            currency: account.currency
         });
         $scope.newAccountModal.hide();
         account.title = "";
@@ -98,29 +117,25 @@ app.controller('AccountCtrl', function($scope, $ionicModal, $firebase) {
 
     $scope.editAccount = function(key, account){
         $scope.updateAccountModal.show();
+        $scope.current_account = account;
     };
 
     $scope.closeUpdateAccount = function(){
         $scope.updateAccountModal.hide();
     };
 
-    $scope.updateAccount = function(key, account){
-        $scope.accounts.$remove(key);
-        $scope.accounts.$add({
-            title: account.title,
-            description: account.description
-        });
-        $scope.updateAccountModal.hide();
-        account.title = "";
-        account.description = "";
-    };
+    $scope.updateAccount = function(){
+        $scope.accounts.$set($scope.current_account.key);
 
-    $scope.accounts = $firebase(accountsFire);
+        $scope.updateAccountModal.hide();
+        $scope.account.title = "";
+        $scope.account.description = "";
+    };
+    $scope.accounts = DataFactory.accounts;
 });
 
-app.controller('CategoryCtrl', function($scope, $ionicModal, $firebase) {
 
-    var categoriesFire = new Firebase(url + "/" + "categories");
+app.controller('CategoryCtrl', function($scope, $ionicModal, $firebase, DataFactory) {
 
     // Create and load the Modal
     $ionicModal.fromTemplateUrl('views/new/new-category.html', function(modal) {
@@ -155,12 +170,12 @@ app.controller('CategoryCtrl', function($scope, $ionicModal, $firebase) {
     $scope.deleteCategory = function(key) {
         $scope.categories.$remove(key);
     };
-    $scope.categories = $firebase(categoriesFire);
+
+    $scope.accounts = DataFactory.accounts;
+    $scope.categories = DataFactory.categories;
 });
 
-app.controller('RecordCtrl', function($scope, $ionicModal, $firebase) {
-
-    var recordsFire = new Firebase(url + "/" + "records");
+app.controller('RecordCtrl', function($scope, $ionicModal, $firebase, DataFactory) {
 
     // Create and load the Modal
     $ionicModal.fromTemplateUrl('views/new/new-record.html', function(modal) {
@@ -194,12 +209,12 @@ app.controller('RecordCtrl', function($scope, $ionicModal, $firebase) {
     $scope.deleteRecord = function(key) {
         $scope.records.$remove(key);
     };
-    $scope.records = $firebase(recordsFire);
+
+    $scope.categories = DataFactory.categories;
+    $scope.records = DataFactory.records;
 });
 
-app.controller('CurrencyCtrl', function($scope, $ionicModal, $firebase) {
-
-    var currenciesFire = new Firebase(url + "/" + "currencies");
+app.controller('CurrencyCtrl', function($scope, $ionicModal, $firebase, DataFactory) {
 
     // Create and load the Modal
     $ionicModal.fromTemplateUrl('views/new/new-currency.html', function(modal) {
@@ -233,10 +248,15 @@ app.controller('CurrencyCtrl', function($scope, $ionicModal, $firebase) {
     $scope.deleteCurrency = function(key) {
         $scope.currencies.$remove(key);
     };
-    $scope.currencies = $firebase(currenciesFire);
+
+    $scope.accounts = DataFactory.accounts;
+    $scope.currencies = DataFactory.currencies;
 });
 
 app.controller('SettingsCtrl', function($scope) {
     $scope.title = 'Settings';
     $scope.message = 'Settings';
-});
+})
+
+
+
