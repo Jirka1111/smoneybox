@@ -11,6 +11,5 @@ input, textarea, [contenteditable] * {
   padding: 10px;
 }
 
-.htitle {
-    font-size: 32px;
+.categoryColor {
 }

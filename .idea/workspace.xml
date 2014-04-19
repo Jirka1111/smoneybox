@@ -23,46 +23,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="application.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="application.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/application.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="213" column="41" selection-start="5852" selection-end="5852" vertical-scroll-proportion="0.0" vertical-offset="2799" max-vertical-offset="4020">
+            <state line="6" column="0" selection-start="337" selection-end="337" vertical-scroll-proportion="-0.4477612" vertical-offset="360" max-vertical-offset="4110">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="new-account.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/views/new/new-account.html">
+      <file leaf-file-name="category.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/www/views/category.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="24" selection-start="747" selection-end="747" vertical-scroll-proportion="-11.25" vertical-offset="0" max-vertical-offset="615">
+            <state line="15" column="10" selection-start="605" selection-end="605" vertical-scroll-proportion="-9.375" vertical-offset="0" max-vertical-offset="480">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="new-record.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/views/new/new-record.html">
+      <file leaf-file-name="application.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/www/stylesheets/application.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="24" selection-start="647" selection-end="647" vertical-scroll-proportion="-9.958333" vertical-offset="16" max-vertical-offset="675">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="new-category.html" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/www/views/new/new-category.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="52" selection-start="806" selection-end="806" vertical-scroll-proportion="0.49222797" vertical-offset="0" max-vertical-offset="675">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="47" selection-start="699" selection-end="699" vertical-scroll-proportion="-11.25" vertical-offset="0" max-vertical-offset="1095">
+            <state line="13" column="16" selection-start="375" selection-end="375" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="300">
               <folding />
             </state>
           </provider>
@@ -84,16 +66,17 @@
         <option value="$PROJECT_DIR$/www/views/update/update-record.html" />
         <option value="$PROJECT_DIR$/www/controllers/accounts.js" />
         <option value="$PROJECT_DIR$/www/controllers/services/account.js" />
-        <option value="$PROJECT_DIR$/www/views/accounts.html" />
         <option value="$PROJECT_DIR$/www/views/update/update-account.html" />
-        <option value="$PROJECT_DIR$/www/views/category.html" />
         <option value="$PROJECT_DIR$/www/views/currency.html" />
-        <option value="$PROJECT_DIR$/www/views/new/new-currency.html" />
-        <option value="$PROJECT_DIR$/www/views/new/new-account.html" />
-        <option value="$PROJECT_DIR$/www/application.js" />
-        <option value="$PROJECT_DIR$/www/views/new/new-record.html" />
         <option value="$PROJECT_DIR$/www/index.html" />
+        <option value="$PROJECT_DIR$/www/views/new/new-currency.html" />
+        <option value="$PROJECT_DIR$/www/views/accounts.html" />
+        <option value="$PROJECT_DIR$/www/application.js" />
+        <option value="$PROJECT_DIR$/www/stylesheets/application.css" />
+        <option value="$PROJECT_DIR$/www/views/category.html" />
+        <option value="$PROJECT_DIR$/www/views/new/new-record.html" />
         <option value="$PROJECT_DIR$/www/views/new/new-category.html" />
+        <option value="$PROJECT_DIR$/www/views/new/new-account.html" />
       </list>
     </option>
   </component>
@@ -222,6 +205,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="smoneybox" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="smoneybox2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="stylesheets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -236,14 +237,6 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
-      <option name="VMOptions" />
-      <option name="arguments" />
-      <option name="filePath" />
-      <option name="scope" value="ALL" />
-      <option name="testName" />
-      <method />
-    </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <option name="VMOptions" />
       <option name="arguments" />
@@ -254,15 +247,23 @@
       <option name="showConsoleOnStdOut" value="false" />
       <method />
     </configuration>
+    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
+      <option name="VMOptions" />
+      <option name="arguments" />
+      <option name="filePath" />
+      <option name="scope" value="ALL" />
+      <option name="testName" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" singleton="true" config-file="">
+      <envs />
+      <method />
+    </configuration>
     <configuration default="true" type="JSTestDriver:ConfigurationType" factoryName="JsTestDriver">
       <setting name="configLocationType" value="CONFIG_FILE" />
       <setting name="settingsFile" value="" />
       <setting name="serverType" value="INTERNAL" />
       <setting name="preferredDebugBrowser" value="CHROME" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" singleton="true" config-file="">
-      <envs />
       <method />
     </configuration>
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
@@ -299,11 +300,11 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -323,11 +324,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/www/views/update/update-account.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="67" selection-start="523" selection-end="523" vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="495" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="20" column="58" selection-start="872" selection-end="872" vertical-scroll-proportion="0.0" vertical-offset="300" max-vertical-offset="1155">
@@ -572,70 +568,73 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/www/views/update/update-account.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="39" selection-start="361" selection-end="361" vertical-scroll-proportion="0.0" vertical-offset="165" max-vertical-offset="495">
+        <state line="11" column="39" selection-start="361" selection-end="361" vertical-scroll-proportion="0.0" vertical-offset="165" max-vertical-offset="495" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/views/currency.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="34" selection-start="554" selection-end="554" vertical-scroll-proportion="0.38860103" vertical-offset="0" max-vertical-offset="579" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="39" selection-start="804" selection-end="804" vertical-scroll-proportion="-12.5" vertical-offset="0" max-vertical-offset="1110">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/views/accounts.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="51" selection-start="482" selection-end="482" vertical-scroll-proportion="0.0" vertical-offset="195" max-vertical-offset="390">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/views/category.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="35" selection-start="728" selection-end="728" vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="435">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/views/currency.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="34" selection-start="554" selection-end="554" vertical-scroll-proportion="0.38860103" vertical-offset="0" max-vertical-offset="579">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/views/new/new-currency.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="47" selection-start="448" selection-end="448" vertical-scroll-proportion="0.33678755" vertical-offset="0" max-vertical-offset="579">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/views/new/new-account.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="24" selection-start="747" selection-end="747" vertical-scroll-proportion="-11.25" vertical-offset="0" max-vertical-offset="615">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/application.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="213" column="41" selection-start="5852" selection-end="5852" vertical-scroll-proportion="0.0" vertical-offset="2799" max-vertical-offset="4020">
+        <state line="15" column="32" selection-start="550" selection-end="550" vertical-scroll-proportion="0.38860103" vertical-offset="0" max-vertical-offset="579">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/views/new/new-record.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="24" selection-start="647" selection-end="647" vertical-scroll-proportion="-9.958333" vertical-offset="16" max-vertical-offset="675">
+        <state line="28" column="109" selection-start="1237" selection-end="1237" vertical-scroll-proportion="0.6200345" vertical-offset="61" max-vertical-offset="675">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/index.html">
+    <entry file="file://$PROJECT_DIR$/www/views/category.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="47" selection-start="699" selection-end="699" vertical-scroll-proportion="-11.25" vertical-offset="0" max-vertical-offset="1095">
+        <state line="15" column="10" selection-start="605" selection-end="605" vertical-scroll-proportion="-9.375" vertical-offset="0" max-vertical-offset="480">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/views/new/new-category.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="52" selection-start="806" selection-end="806" vertical-scroll-proportion="0.49222797" vertical-offset="0" max-vertical-offset="675">
+        <state line="30" column="106" selection-start="1328" selection-end="1328" vertical-scroll-proportion="0.7512953" vertical-offset="15" max-vertical-offset="750">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/stylesheets/application.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="16" selection-start="375" selection-end="375" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="300">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/views/new/new-currency.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="70" selection-start="519" selection-end="519" vertical-scroll-proportion="0.3626943" vertical-offset="0" max-vertical-offset="579">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/views/new/new-account.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="110" selection-start="1051" selection-end="1051" vertical-scroll-proportion="0.60103625" vertical-offset="12" max-vertical-offset="615">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/application.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="0" selection-start="337" selection-end="337" vertical-scroll-proportion="-0.4477612" vertical-offset="360" max-vertical-offset="4110">
           <folding />
         </state>
       </provider>

@@ -5,6 +5,7 @@ var categoriesFire = new Firebase(url + "/" + "categories");
 var recordsFire = new Firebase(url + "/" + "records");
 var currenciesFire = new Firebase(url + "/" + "currencies");
 
+
 // configure our routes
 app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
     $stateProvider
@@ -97,7 +98,7 @@ app.controller('AccountCtrl', function($scope, $ionicModal, DataFactory) {
             currency: account.currency
         });
         $scope.newAccountModal.hide();
-        account.title = "";
+        account.name = "";
         account.description = "";
     };
 
@@ -148,13 +149,15 @@ app.controller('CategoryCtrl', function($scope, $ionicModal, $firebase, DataFact
     // Called when the form is submitted
     $scope.createCategory = function(category) {
         $scope.categories.$add({
-            title: category.title,
+            name: category.name,
             description: category.description,
+            color: category.color,
             account: category.account
         });
         $scope.categoryModal.hide();
-        category.title = "";
+        category.name = "";
         category.description = "";
+        category.color = "";
     };
 
     // Open our new task modal
@@ -188,11 +191,14 @@ app.controller('RecordCtrl', function($scope, $ionicModal, $firebase, DataFactor
     // Called when the form is submitted
     $scope.createRecord = function(record) {
         $scope.records.$add({
-            title: record.title,
-            description: record.description
+            amount: record.amount,
+            date: record.date,
+            description: record.description,
+            category: record.category
         });
         $scope.recordModal.hide();
-        record.title = "";
+        record.amount = "";
+        record.date = "";
         record.description = "";
     };
 
@@ -227,11 +233,11 @@ app.controller('CurrencyCtrl', function($scope, $ionicModal, $firebase, DataFact
     // Called when the form is submitted
     $scope.createCurrency = function(currency) {
         $scope.currencies.$add({
-            title: currency.title,
+            name: currency.name,
             description: currency.description
         });
         $scope.currencyModal.hide();
-        currency.title = "";
+        currency.name = "";
         currency.description = "";
     };
 

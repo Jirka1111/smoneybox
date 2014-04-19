@@ -26,7 +26,7 @@
                         Category:
                     </div>
                     <select>
-                        <option ng-repeat="category in categories">{{category.title}}</option>
+                        <option ng-repeat="category in categories" ng-model="record.category">{{category.name}}</option>
                     </select>
                 </div>
             </div>

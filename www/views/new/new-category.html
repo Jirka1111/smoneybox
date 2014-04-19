@@ -17,13 +17,18 @@
                 <label class="item item-input">
                     <input type="text" placeholder="Description" ng-model="category.description">
                 </label>
-                <input class="color" value="66ff00">
+                <label class="item item-input">
+                    <div class="input-label">
+                        Color:
+                    </div>
+                    <input type="color" name="#4A87EE" value="#4A87EE" ng-model="category.color">
+                </label>
                 <div class="item item-input item-select">
                     <div class="input-label">
                         Account:
                     </div>
                     <select>
-                        <option ng-repeat="account in accounts">{{account.title}}</option>
+                        <option ng-repeat="account in accounts" ng-model="category.account">{{account.name}}</option>
                     </select>
                 </div>
             </div>

@@ -12,7 +12,7 @@
         <form ng-submit="createAccount(account)">
             <div class="list">
                 <label class="item item-input">
-                    <input type="text" placeholder="Name of the account" ng-model="account.title" required>
+                    <input type="text" placeholder="Name of the account" ng-model="account.name" required>
                 </label>
                 <label class="item item-input">
                     <input type="text" placeholder="Description" ng-model="account.description">
@@ -22,7 +22,7 @@
                         Currency:
                     </div>
                     <select>
-                        <option ng-repeat="currency in currencies">{{currency.title}}</option>
+                        <option ng-repeat="currency in currencies" ng-model="account.currency">{{currency.name}}</option>
                     </select>
                 </div>
             </div>
