@@ -12,7 +12,7 @@
     <!-- our list and list items -->
     <ion-list>
       <ion-item ng-repeat="(key, record) in records">
-        {{record.title}}
+        {{record.amount}}
           <h6>{{record.description}}</h6>
         <ion-option-button class="button-assertive" ng-click="deleteRecord(key)">Delete</ion-option-button>
       </ion-item>

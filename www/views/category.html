@@ -11,12 +11,11 @@
 <ion-content>
     <!-- our list and list items -->
     <ion-list>
-      <ion-item ng-repeat="(key, category) in categories">
+      <ion-item ng-repeat="(key, category) in categories" ng-click="selectCategory(category, key)">
         <div class="categoryColor" ng-style="{'color': '{{category.color}}'}">{{category.name}}</div>
-          <h6>{{category.description}}</h6>
+          <h6 ng-style="{'color': '{{category.color}}'}">{{category.description}}</h6>
         <ion-option-button class="button-assertive" ng-click="deleteCategory(key)">Delete</ion-option-button>
       </ion-item>
-
     <ion-item ng-repeat="account in accounts">
         {{account.title}}
     </ion-item>

@@ -75,6 +75,8 @@ app.controller('MainCtrl', function($scope, $ionicSideMenuDelegate) {
 
 app.controller('AccountCtrl', function($scope, $ionicModal, DataFactory) {
 
+    $scope.accounts = [];
+
     // Create and load the Modal
     $ionicModal.fromTemplateUrl('views/new/new-account.html', function(modal) {
         $scope.newAccountModal = modal;
@@ -95,7 +97,8 @@ app.controller('AccountCtrl', function($scope, $ionicModal, DataFactory) {
         $scope.accounts.$add({
             name: account.name,
             description: account.description,
-            currency: account.currency
+            currency: account.currency,
+            hovna: account.hovna
         });
         $scope.newAccountModal.hide();
         account.name = "";
@@ -119,6 +122,7 @@ app.controller('AccountCtrl', function($scope, $ionicModal, DataFactory) {
     $scope.editAccount = function(key, account){
         $scope.updateAccountModal.show();
         $scope.current_account = account;
+        $scope.current_account_key = key;
     };
 
     $scope.closeUpdateAccount = function(){
@@ -126,17 +130,20 @@ app.controller('AccountCtrl', function($scope, $ionicModal, DataFactory) {
     };
 
     $scope.updateAccount = function(){
-        $scope.accounts.$set($scope.current_account.key);
+        $scope.accounts.$set({name: $scope.current_account.name, description: $scope.current_account.description});
 
         $scope.updateAccountModal.hide();
-        $scope.account.title = "";
+        $scope.account.name = "";
         $scope.account.description = "";
     };
     $scope.accounts = DataFactory.accounts;
+    $scope.currencies = DataFactory.currencies;
 });
 
 
 app.controller('CategoryCtrl', function($scope, $ionicModal, $firebase, DataFactory) {
+
+    $scope.categories = [];
 
     // Create and load the Modal
     $ionicModal.fromTemplateUrl('views/new/new-category.html', function(modal) {
@@ -174,11 +181,17 @@ app.controller('CategoryCtrl', function($scope, $ionicModal, $firebase, DataFact
         $scope.categories.$remove(key);
     };
 
+    $scope.selectCategory =
+
+
+
     $scope.accounts = DataFactory.accounts;
     $scope.categories = DataFactory.categories;
 });
 
 app.controller('RecordCtrl', function($scope, $ionicModal, $firebase, DataFactory) {
+
+    $scope.records = [];
 
     // Create and load the Modal
     $ionicModal.fromTemplateUrl('views/new/new-record.html', function(modal) {
@@ -222,6 +235,8 @@ app.controller('RecordCtrl', function($scope, $ionicModal, $firebase, DataFactor
 
 app.controller('CurrencyCtrl', function($scope, $ionicModal, $firebase, DataFactory) {
 
+    $scope.currencies = [];
+
     // Create and load the Modal
     $ionicModal.fromTemplateUrl('views/new/new-currency.html', function(modal) {
         $scope.currencyModal = modal;
@@ -255,7 +270,6 @@ app.controller('CurrencyCtrl', function($scope, $ionicModal, $firebase, DataFact
         $scope.currencies.$remove(key);
     };
 
-    $scope.accounts = DataFactory.accounts;
     $scope.currencies = DataFactory.currencies;
 });
 
@@ -263,6 +277,5 @@ app.controller('SettingsCtrl', function($scope) {
     $scope.title = 'Settings';
     $scope.message = 'Settings';
 })
-
 
 

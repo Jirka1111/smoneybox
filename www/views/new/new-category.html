@@ -8,7 +8,6 @@
 
     <!-- Modal content area -->
     <ion-content>
-
         <form ng-submit="createCategory(category)">
             <div class="list">
                 <label class="item item-input">
@@ -21,19 +20,15 @@
                     <div class="input-label">
                         Color:
                     </div>
-                    <input type="color" name="#4A87EE" value="#4A87EE" ng-model="category.color">
+                    <input type="color" ng-model="category.color">
                 </label>
                 <div class="item item-input item-select">
                     <div class="input-label">
                         Account:
                     </div>
-                    <select>
-                        <option ng-repeat="account in accounts" ng-model="category.account">{{account.name}}</option>
-                    </select>
+                    <select ng-model="category.account" ng-options="key as account.name for (key, account) in accounts"></select>
                 </div>
             </div>
-
-
 
             <div class="padding">
                 <button type="submit" class="button button-block button-positive">Create Category</button>

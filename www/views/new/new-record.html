@@ -12,7 +12,7 @@
         <form ng-submit="createRecord(record)">
             <div class="list">
                 <label class="item item-input">
-                    <input type="text" placeholder="Name of the currency" ng-model="record.amount" required>
+                    <input type="number" placeholder="Name of the record" ng-model="record.amount" required>
                 </label>
                 <label class="item item-input">
                     Date
@@ -25,9 +25,7 @@
                     <div class="input-label">
                         Category:
                     </div>
-                    <select>
-                        <option ng-repeat="category in categories" ng-model="record.category">{{category.name}}</option>
-                    </select>
+                    <select ng-model="record.category" ng-options="key as category.name for (key, category) in categories"></select>
                 </div>
             </div>
             <div class="padding">
