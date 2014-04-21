@@ -26,7 +26,7 @@
       <file leaf-file-name="application.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/application.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="237" column="27" selection-start="6427" selection-end="6427" vertical-scroll-proportion="0.0" vertical-offset="81" max-vertical-offset="4305">
+            <state line="75" column="71" selection-start="2109" selection-end="2109" vertical-scroll-proportion="0.0" vertical-offset="2284" max-vertical-offset="4230">
               <folding />
             </state>
           </provider>
@@ -50,19 +50,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="new-account.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="new-account.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/views/new/new-account.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="39" selection-start="664" selection-end="664" vertical-scroll-proportion="0.45053002" vertical-offset="0" max-vertical-offset="585">
+            <state line="17" column="39" selection-start="664" selection-end="664" vertical-scroll-proportion="-10.625" vertical-offset="0" max-vertical-offset="585">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="category.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="category.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/views/category.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="96" selection-start="530" selection-end="530" vertical-scroll-proportion="-8.125" vertical-offset="0" max-vertical-offset="465">
+            <state line="17" column="17" selection-start="850" selection-end="850" vertical-scroll-proportion="0.44041452" vertical-offset="0" max-vertical-offset="579">
               <folding />
             </state>
           </provider>
@@ -89,13 +89,13 @@
         <option value="$PROJECT_DIR$/www/javascripts/minicolor.js" />
         <option value="$PROJECT_DIR$/www/index.html" />
         <option value="$PROJECT_DIR$/www/views/update/update-account.html" />
-        <option value="$PROJECT_DIR$/www/views/category.html" />
         <option value="$PROJECT_DIR$/www/views/currency.html" />
-        <option value="$PROJECT_DIR$/www/application.js" />
         <option value="$PROJECT_DIR$/www/views/new/new-account.html" />
         <option value="$PROJECT_DIR$/www/views/new/new-category.html" />
         <option value="$PROJECT_DIR$/www/views/record.html" />
         <option value="$PROJECT_DIR$/www/views/new/new-record.html" />
+        <option value="$PROJECT_DIR$/www/application.js" />
+        <option value="$PROJECT_DIR$/www/views/category.html" />
       </list>
     </option>
   </component>
@@ -535,23 +535,9 @@
         <state line="21" column="88" selection-start="893" selection-end="893" vertical-scroll-proportion="0.54404145" vertical-offset="0" max-vertical-offset="579" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/views/category.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="96" selection-start="530" selection-end="530" vertical-scroll-proportion="-8.125" vertical-offset="0" max-vertical-offset="465">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/views/accounts.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="32" selection-start="550" selection-end="550" vertical-scroll-proportion="0.38860103" vertical-offset="0" max-vertical-offset="579">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/application.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="237" column="27" selection-start="6427" selection-end="6427" vertical-scroll-proportion="0.0" vertical-offset="81" max-vertical-offset="4305">
           <folding />
         </state>
       </provider>
@@ -584,6 +570,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/www/views/new/new-account.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="39" selection-start="664" selection-end="664" vertical-scroll-proportion="-10.625" vertical-offset="0" max-vertical-offset="585">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/www/views/record.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="14" column="23" selection-start="506" selection-end="506" vertical-scroll-proportion="-8.75" vertical-offset="0" max-vertical-offset="375">
@@ -591,9 +584,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/views/new/new-account.html">
+    <entry file="file://$PROJECT_DIR$/www/application.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="39" selection-start="664" selection-end="664" vertical-scroll-proportion="0.45053002" vertical-offset="0" max-vertical-offset="585">
+        <state line="75" column="71" selection-start="2109" selection-end="2109" vertical-scroll-proportion="0.0" vertical-offset="2284" max-vertical-offset="4230">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/views/category.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="17" selection-start="850" selection-end="850" vertical-scroll-proportion="0.44041452" vertical-offset="0" max-vertical-offset="579">
           <folding />
         </state>
       </provider>
