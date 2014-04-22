@@ -2,14 +2,14 @@
 
     <!-- Modal header bar -->
     <ion-header-bar class="bar-secondary">
-        <h1 class="title">Update Account</h1>
+        <h1 class="title">Update Account - {{current_account.name}}</h1>
         <button class="button button-clear button-positive" ng-click="closeUpdateAccount()">Cancel</button>
     </ion-header-bar>
 
     <!-- Modal content area -->
     <ion-content>
 
-        <form ng-submit="updateAccount()">
+        <form ng-submit="updateAccount(account)">
             <div class="list">
                 <label class="item item-input">
                     <input type="text" placeholder="{{current_account.name}}" ng-model="account.name">
@@ -17,6 +17,12 @@
                 <label class="item item-input">
                     <input type="text" placeholder="{{current_account.description}}" ng-model="account.description">
                 </label>
+                <div class="item item-input item-select">
+                    <div class="input-label">
+                        Currency:
+                    </div>
+                    <select ng-model="account.currency" ng-options="key as currency.name for (key, currency) in currencies"></select>
+                </div>
             </div>
             <div class="padding">
                 <button type="submit" class="button button-block button-positive">Update Account</button>

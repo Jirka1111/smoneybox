@@ -2,7 +2,7 @@
 
     <!-- Modal header bar -->
     <ion-header-bar class="bar-secondary">
-        <h1 class="title">Update Currency</h1>
+        <h1 class="title">Update Currency - {{current_currency.name}}</h1>
         <button class="button button-clear button-positive" ng-click="closeUpdateCurrency()">Cancel</button>
     </ion-header-bar>
 
@@ -12,10 +12,10 @@
         <form ng-submit="updateCurrency(currency)">
             <div class="list">
                 <label class="item item-input">
-                    <input type="text" placeholder="Name of the currency" ng-model="currency.title">
+                    <input type="text" placeholder="{{current_currency.name}}" ng-model="currency.name" required>
                 </label>
                 <label class="item item-input">
-                    <input type="text" placeholder="Description" ng-model="currency.description">
+                    <input type="text" placeholder="{{current_currency.description}}" ng-model="currency.description" required>
                 </label>
             </div>
             <div class="padding">

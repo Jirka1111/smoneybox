@@ -2,7 +2,7 @@
 
     <!-- Modal header bar -->
     <ion-header-bar class="bar-secondary">
-        <h1 class="title">Update Record</h1>
+        <h1 class="title">Update Record - {{current_record.amount}}</h1>
         <button class="button button-clear button-positive" ng-click="closeUpdateRecord()">Cancel</button>
     </ion-header-bar>
 
@@ -12,14 +12,24 @@
         <form ng-submit="updateRecord(record)">
             <div class="list">
                 <label class="item item-input">
-                    <input type="text" placeholder="Name of the currency" ng-model="record.title">
+                    <input type="number" placeholder="{{current_record.amount}}" ng-model="record.amount" required>
                 </label>
                 <label class="item item-input">
-                    <input type="text" placeholder="Description" ng-model="record.description">
+                    Date
+                    <input type="datetime-local" placeholder="{{current_record.date}}" ng-model="record.date" required>
                 </label>
+                <label class="item item-input">
+                    <input type="text" placeholder="{{current_record.description}}" ng-model="record.description" required>
+                </label>
+                <div class="item item-input item-select">
+                    <div class="input-label">
+                        Category:
+                    </div>
+                    <select ng-model="record.category" ng-options="key as category.name for (key, category) in categories" required></select>
+                </div>
             </div>
             <div class="padding">
-                <button type="submit" class="button button-block button-positive">Update Record</button>
+                <button type="submit" class="button button-block button-positive">Create Record</button>
             </div>
         </form>
 

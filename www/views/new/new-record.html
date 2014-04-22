@@ -12,20 +12,20 @@
         <form ng-submit="createRecord(record)">
             <div class="list">
                 <label class="item item-input">
-                    <input type="number" placeholder="Name of the record" ng-model="record.amount" required>
+                    <input type="number" placeholder="Amount of the record" ng-model="record.amount" required>
                 </label>
                 <label class="item item-input">
                     Date
-                    <input type="datetime-local" placeholder="Date" ng-model="record.date">
+                    <input type="datetime-local" placeholder="Date" ng-model="record.date" required>
                 </label>
                 <label class="item item-input">
-                    <input type="text" placeholder="Description" ng-model="record.description">
+                    <input type="text" placeholder="Description" ng-model="record.description" required>
                 </label>
                 <div class="item item-input item-select">
                     <div class="input-label">
                         Category:
                     </div>
-                    <select ng-model="record.category" ng-options="key as category.name for (key, category) in categories"></select>
+                    <select ng-model="record.category" ng-options="key as category.name for (key, category) in categories" required></select>
                 </div>
             </div>
             <div class="padding">

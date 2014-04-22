@@ -1,0 +1,21 @@
+<ion-header-bar class="bar-secondary bar-calm">
+    <button class="button button-icon" ng-click="toggleLeft()">
+        <i class="icon ion-navicon-round icon-left"></i>
+    </button>
+    <h1 class="title">Account detail ({{account.name}})</h1>
+    <button class="button button-icon" ng-click="newAccount()">
+        <i class="icon ion-plus icon-right"></i>
+    </button>
+</ion-header-bar>
+
+<ion-content>
+    <!-- our list and list items -->
+    <ion-list>
+        <ion-item ng-repeat="(key, account) in categories">
+            {{account.name}}
+            <h6>{{account.description}}</h6>
+            <ion-option-button class="button-balanced" ng-click="editAccount(key, account)">Edit</ion-option-button>
+            <ion-option-button class="button-assertive" ng-click="deleteAccount(key)">Delete</ion-option-button>
+        </ion-item>
+    </ion-list>
+</ion-content>

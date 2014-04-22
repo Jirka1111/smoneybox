@@ -14,22 +14,21 @@
                     <input type="text" placeholder="Name of the category" ng-model="category.name" required>
                 </label>
                 <label class="item item-input">
-                    <input type="text" placeholder="Description" ng-model="category.description">
+                    <input type="text" placeholder="Description" ng-model="category.description" required>
                 </label>
                 <label class="item item-input">
                     <div class="input-label">
                         Color:
                     </div>
-                    <input type="color" ng-model="category.color">
+                    <input type="color" ng-model="category.color" required>
                 </label>
                 <div class="item item-input item-select">
                     <div class="input-label">
                         Account:
                     </div>
-                    <select ng-model="category.account" ng-options="key as account.name for (key, account) in accounts"></select>
+                    <select ng-model="category.account" ng-options="key as account.name for (key, account) in accounts" required></select>
                 </div>
             </div>
-
             <div class="padding">
                 <button type="submit" class="button button-block button-positive">Create Category</button>
             </div>

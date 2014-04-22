@@ -21,6 +21,12 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
             controller  : 'AccountCtrl'
         })
 
+        .state('detail_account', {
+            url: '/detail_account',
+            templateUrl : '/views/detail/detail_account.html',
+            controller  : 'AccountCtrl'
+        })
+
         .state('categories', {
             url: '/categories',
             templateUrl : '/views/category.html',
@@ -73,7 +79,7 @@ app.controller('MainCtrl', function($scope, $ionicSideMenuDelegate) {
 });
 
 
-app.controller('AccountCtrl', function($scope, $ionicModal, DataFactory) {
+app.controller('AccountCtrl', function($scope, $ionicModal, $firebase, DataFactory) {
 
     $scope.accounts = [];
 
@@ -128,11 +134,20 @@ app.controller('AccountCtrl', function($scope, $ionicModal, DataFactory) {
         $scope.updateAccountModal.hide();
     };
 
-    $scope.updateAccount = function(){
+    $scope.updateAccount = function(account){
+
+        var ref = new Firebase(url + "/accounts/" + $scope.current_account_key);
+
+        $scope.updatedAccount = $firebase(ref);
+        $scope.updatedAccount.$set({
+            name: account.name,
+            description: account.description,
+            currency: account.currency
+        });
 
         $scope.updateAccountModal.hide();
-        $scope.account.name = "";
-        $scope.account.description = "";
+        account.name = "";
+        account.description = "";
     };
 
     $scope.accounts = DataFactory.accounts;
@@ -140,13 +155,20 @@ app.controller('AccountCtrl', function($scope, $ionicModal, DataFactory) {
 });
 
 
-app.controller('CategoryCtrl', function($scope, $ionicModal, DataFactory) {
+app.controller('CategoryCtrl', function($scope, $ionicModal, $firebase, DataFactory) {
 
     $scope.categories = [];
 
     // Create and load the Modal
     $ionicModal.fromTemplateUrl('views/new/new-category.html', function(modal) {
         $scope.categoryModal = modal;
+    }, {
+        scope: $scope,
+        animation: 'slide-in-up'
+    });
+
+    $ionicModal.fromTemplateUrl('views/update/update-category.html', function(modal) {
+        $scope.updateCategoryModal = modal;
     }, {
         scope: $scope,
         animation: 'slide-in-up'
@@ -180,17 +202,52 @@ app.controller('CategoryCtrl', function($scope, $ionicModal, DataFactory) {
         $scope.categories.$remove(key);
     };
 
+    $scope.editCategory = function(key, category){
+        $scope.updateCategoryModal.show();
+        $scope.current_category = category;
+        $scope.current_category_key = key;
+    };
+
+    $scope.closeUpdateCategory = function(){
+        $scope.updateCategoryModal.hide();
+    };
+
+    $scope.updateCategory = function(category){
+
+        var ref = new Firebase(url + "/categories/" + $scope.current_category_key);
+
+        $scope.updatedCategory = $firebase(ref);
+        $scope.updatedCategory.$set({
+            name: category.name,
+            description: category.description,
+            color: category.color,
+            account: category.account
+        });
+
+        $scope.updateCategoryModal.hide();
+        category.name = "";
+        category.description = "";
+    };
+
+
     $scope.accounts = DataFactory.accounts;
     $scope.categories = DataFactory.categories;
 });
 
-app.controller('RecordCtrl', function($scope, $ionicModal, DataFactory) {
+app.controller('RecordCtrl', function($scope, $ionicModal, $firebase, DataFactory) {
 
     $scope.records = [];
 
     // Create and load the Modal
     $ionicModal.fromTemplateUrl('views/new/new-record.html', function(modal) {
         $scope.recordModal = modal;
+    }, {
+        scope: $scope,
+        animation: 'slide-in-up'
+    });
+
+    $ionicModal.fromTemplateUrl('views/update/update-record.html', function(modal) {
+        $scope.updateRecordModal = modal;
     }, {
         scope: $scope,
         animation: 'slide-in-up'
@@ -224,17 +281,51 @@ app.controller('RecordCtrl', function($scope, $ionicModal, DataFactory) {
         $scope.records.$remove(key);
     };
 
+    $scope.editRecord = function(key, record){
+        $scope.updateRecordModal.show();
+        $scope.current_record = record;
+        $scope.current_record_key = key;
+    };
+
+    $scope.closeUpdateRecord = function(){
+        $scope.updateRecordModal.hide();
+    };
+
+    $scope.updateRecord = function(record){
+
+        var ref = new Firebase(url + "/records/" + $scope.current_record_key);
+
+        $scope.updatedRecord = $firebase(ref);
+        $scope.updatedRecord.$set({
+            amount: record.amount,
+            date: record.date,
+            description: record.description,
+            category: record.category
+        });
+        $scope.updateRecordModal.hide();
+        record.amount = "";
+        record.date = "";
+        record.description = "";
+    };
+
     $scope.categories = DataFactory.categories;
     $scope.records = DataFactory.records;
 });
 
-app.controller('CurrencyCtrl', function($scope, $ionicModal, DataFactory) {
+app.controller('CurrencyCtrl', function($scope, $ionicModal, $firebase, DataFactory) {
 
     $scope.currencies = [];
 
     // Create and load the Modal
     $ionicModal.fromTemplateUrl('views/new/new-currency.html', function(modal) {
         $scope.currencyModal = modal;
+    }, {
+        scope: $scope,
+        animation: 'slide-in-up'
+    });
+
+    $ionicModal.fromTemplateUrl('views/update/update-currency.html', function(modal) {
+        $scope.updateCurrencyModal = modal;
     }, {
         scope: $scope,
         animation: 'slide-in-up'
@@ -263,6 +354,31 @@ app.controller('CurrencyCtrl', function($scope, $ionicModal, DataFactory) {
 
     $scope.deleteCurrency = function(key) {
         $scope.currencies.$remove(key);
+    };
+
+    $scope.editCurrency = function(key, currency){
+        $scope.updateCurrencyModal.show();
+        $scope.current_currency = currency;
+        $scope.current_currency_key = key;
+    };
+
+    $scope.closeUpdateCurrency = function(){
+        $scope.updateCurrencyModal.hide();
+    };
+
+    $scope.updateCurrency = function(currency){
+
+        var ref = new Firebase(url + "/currencies/" + $scope.current_currency_key);
+
+        $scope.updatedCurrency = $firebase(ref);
+        $scope.updatedCurrency.$set({
+            name: currency.name,
+            description: currency.description
+        });
+
+        $scope.updateCurrencyModal.hide();
+        currency.name = "";
+        currency.description = "";
     };
 
     $scope.currencies = DataFactory.currencies;
