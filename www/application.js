@@ -73,7 +73,7 @@ app.controller('MainCtrl', function($scope, $ionicSideMenuDelegate) {
 });
 
 
-app.controller('AccountCtrl', function($scope, $ionicModal, $firebase, DataFactory) {
+app.controller('AccountCtrl', function($scope, $ionicModal, DataFactory) {
 
     $scope.accounts = [];
 
@@ -128,19 +128,19 @@ app.controller('AccountCtrl', function($scope, $ionicModal, $firebase, DataFacto
         $scope.updateAccountModal.hide();
     };
 
-//    $scope.updateAccount = function(){
-//        $scope.accounts.$set({name: $scope.current_account.name, description: $scope.current_account.description});
-//
-//        $scope.updateAccountModal.hide();
-//        $scope.account.name = "";
-//        $scope.account.description = "";
-//    };
+    $scope.updateAccount = function(){
+
+        $scope.updateAccountModal.hide();
+        $scope.account.name = "";
+        $scope.account.description = "";
+    };
+
     $scope.accounts = DataFactory.accounts;
     $scope.currencies = DataFactory.currencies;
 });
 
 
-app.controller('CategoryCtrl', function($scope, $ionicModal, $firebase, DataFactory) {
+app.controller('CategoryCtrl', function($scope, $ionicModal, DataFactory) {
 
     $scope.categories = [];
 
@@ -184,7 +184,7 @@ app.controller('CategoryCtrl', function($scope, $ionicModal, $firebase, DataFact
     $scope.categories = DataFactory.categories;
 });
 
-app.controller('RecordCtrl', function($scope, $ionicModal, $firebase, DataFactory) {
+app.controller('RecordCtrl', function($scope, $ionicModal, DataFactory) {
 
     $scope.records = [];
 
@@ -228,7 +228,7 @@ app.controller('RecordCtrl', function($scope, $ionicModal, $firebase, DataFactor
     $scope.records = DataFactory.records;
 });
 
-app.controller('CurrencyCtrl', function($scope, $ionicModal, $firebase, DataFactory) {
+app.controller('CurrencyCtrl', function($scope, $ionicModal, DataFactory) {
 
     $scope.currencies = [];
 
@@ -271,6 +271,7 @@ app.controller('CurrencyCtrl', function($scope, $ionicModal, $firebase, DataFact
 app.controller('SettingsCtrl', function($scope) {
     $scope.title = 'Settings';
     $scope.message = 'Settings';
-})
+});
+
 
 

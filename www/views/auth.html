@@ -1,0 +1,19 @@
+<ion-header-bar class="bar-secondary bar-calm">
+    <button class="button button-icon" ng-click="toggleLeft()">
+        <i class="icon ion-navicon-round icon-left"></i>
+    </button>
+</ion-header-bar>
+
+<ion-content>
+    <!-- our list and list items -->
+    <ion-list>
+        <ion-item ng-repeat="(key, category) in categories" ng-click="selectCategory(category, key)">
+            <div class="categoryColor" ng-style="{'color': '{{category.color}}'}">{{category.name}}</div>
+            <h6 ng-style="{'color': '{{category.color}}'}">{{category.description}}</h6>
+            <ion-option-button class="button-assertive" ng-click="deleteCategory(key)">Delete</ion-option-button>
+        </ion-item>
+    </ion-list>
+    <style>
+
+    </style>
+</ion-content>
