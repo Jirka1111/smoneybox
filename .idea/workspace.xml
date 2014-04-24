@@ -23,13 +23,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="application.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="application.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/application.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="307" column="20" selection-start="8470" selection-end="8470" vertical-scroll-proportion="0.46932006" vertical-offset="4322" max-vertical-offset="5985">
-              <folding>
-                <marker date="1398173747068" expanded="true" signature="6545:8582" placeholder="{...}" />
-              </folding>
+            <state line="307" column="20" selection-start="8470" selection-end="8470" vertical-scroll-proportion="0.0" vertical-offset="2375" max-vertical-offset="5985">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="record.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/www/views/record.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="14" column="25" selection-start="508" selection-end="508" vertical-scroll-proportion="0.3626943" vertical-offset="0" max-vertical-offset="579">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="new-category.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/www/views/new/new-category.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="28" column="128" selection-start="1307" selection-end="1307" vertical-scroll-proportion="-15.0" vertical-offset="60" max-vertical-offset="660">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -247,6 +263,14 @@
     </key>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
+      <option name="VMOptions" />
+      <option name="arguments" />
+      <option name="filePath" />
+      <option name="scope" value="ALL" />
+      <option name="testName" />
+      <method />
+    </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <option name="VMOptions" />
       <option name="arguments" />
@@ -257,23 +281,15 @@
       <option name="showConsoleOnStdOut" value="false" />
       <method />
     </configuration>
-    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
-      <option name="VMOptions" />
-      <option name="arguments" />
-      <option name="filePath" />
-      <option name="scope" value="ALL" />
-      <option name="testName" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" singleton="true" config-file="">
-      <envs />
-      <method />
-    </configuration>
     <configuration default="true" type="JSTestDriver:ConfigurationType" factoryName="JsTestDriver">
       <setting name="configLocationType" value="CONFIG_FILE" />
       <setting name="settingsFile" value="" />
       <setting name="serverType" value="INTERNAL" />
       <setting name="preferredDebugBrowser" value="CHROME" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" singleton="true" config-file="">
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
@@ -310,11 +326,11 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -352,9 +368,7 @@
     <entry file="file://$PROJECT_DIR$/www/application.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="105" column="43" selection-start="2821" selection-end="2821" vertical-scroll-proportion="0.0" vertical-offset="1575" max-vertical-offset="3690">
-          <folding>
-            <marker date="1398173747068" expanded="true" signature="6545:8582" placeholder="{...}" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -371,9 +385,7 @@
     <entry file="file://$PROJECT_DIR$/www/application.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="105" column="43" selection-start="2821" selection-end="2821" vertical-scroll-proportion="0.0" vertical-offset="1575" max-vertical-offset="3690">
-          <folding>
-            <marker date="1398173747068" expanded="true" signature="6545:8582" placeholder="{...}" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -385,9 +397,7 @@
     <entry file="file://$PROJECT_DIR$/www/application.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="92" column="0" selection-start="2507" selection-end="2507" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3570">
-          <folding>
-            <marker date="1398173747068" expanded="true" signature="6545:8582" placeholder="{...}" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -399,9 +409,7 @@
     <entry file="file://$PROJECT_DIR$/www/application.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="87" column="39" selection-start="2375" selection-end="2375" vertical-scroll-proportion="0.0" vertical-offset="1072" max-vertical-offset="3315">
-          <folding>
-            <marker date="1398173747068" expanded="true" signature="6545:8582" placeholder="{...}" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -413,9 +421,7 @@
     <entry file="file://$PROJECT_DIR$/www/application.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="205" column="33" selection-start="5573" selection-end="5573" vertical-scroll-proportion="0.0" vertical-offset="1887" max-vertical-offset="3300">
-          <folding>
-            <marker date="1398173747068" expanded="true" signature="6545:8582" placeholder="{...}" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -452,9 +458,7 @@
     <entry file="file://$PROJECT_DIR$/www/application.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="172" column="0" selection-start="4645" selection-end="4645" vertical-scroll-proportion="0.0" vertical-offset="2697" max-vertical-offset="3300">
-          <folding>
-            <marker date="1398173747068" expanded="true" signature="6545:8582" placeholder="{...}" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -481,9 +485,7 @@
     <entry file="file://$PROJECT_DIR$/www/application.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="72" column="18" selection-start="1913" selection-end="2024" vertical-scroll-proportion="0.0" vertical-offset="765" max-vertical-offset="3375">
-          <folding>
-            <marker date="1398173747068" expanded="true" signature="6545:8582" placeholder="{...}" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -510,9 +512,7 @@
     <entry file="file://$PROJECT_DIR$/www/application.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="73" column="33" selection-start="2037" selection-end="2037" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2910">
-          <folding>
-            <marker date="1398173747068" expanded="true" signature="6545:8582" placeholder="{...}" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -524,9 +524,7 @@
     <entry file="file://$PROJECT_DIR$/www/application.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="73" column="33" selection-start="2037" selection-end="2037" vertical-scroll-proportion="0.0" vertical-offset="760" max-vertical-offset="2910">
-          <folding>
-            <marker date="1398173747068" expanded="true" signature="6545:8582" placeholder="{...}" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -559,63 +557,69 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/www/views/detail/detail_account.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="57" selection-start="513" selection-end="513" vertical-scroll-proportion="-8.125" vertical-offset="0" max-vertical-offset="390">
-          <folding />
-        </state>
+        <state line="13" column="57" selection-start="513" selection-end="513" vertical-scroll-proportion="-8.125" vertical-offset="0" max-vertical-offset="390" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/views/new/new-account.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="16" selection-start="763" selection-end="1068" vertical-scroll-proportion="-11.875" vertical-offset="0" max-vertical-offset="585">
-          <folding />
-        </state>
+        <state line="19" column="16" selection-start="763" selection-end="1068" vertical-scroll-proportion="-11.875" vertical-offset="0" max-vertical-offset="585" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/views/accounts.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="12" selection-start="575" selection-end="679" vertical-scroll-proportion="0.41450778" vertical-offset="0" max-vertical-offset="579">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/views/new/new-category.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="128" selection-start="1307" selection-end="1307" vertical-scroll-proportion="0.74204946" vertical-offset="0" max-vertical-offset="660">
-          <folding />
-        </state>
+        <state line="16" column="12" selection-start="575" selection-end="679" vertical-scroll-proportion="0.41450778" vertical-offset="0" max-vertical-offset="579" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/views/update/update-account.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="43" selection-start="137" selection-end="137" vertical-scroll-proportion="0.10600707" vertical-offset="0" max-vertical-offset="585">
-          <folding />
-        </state>
+        <state line="4" column="43" selection-start="137" selection-end="137" vertical-scroll-proportion="0.10600707" vertical-offset="0" max-vertical-offset="585" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/views/update/update-category.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="69" selection-start="163" selection-end="163" vertical-scroll-proportion="0.10600707" vertical-offset="0" max-vertical-offset="660">
-          <folding />
-        </state>
+        <state line="4" column="69" selection-start="163" selection-end="163" vertical-scroll-proportion="0.10600707" vertical-offset="0" max-vertical-offset="660" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/views/new/new-currency.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="105" selection-start="736" selection-end="736" vertical-scroll-proportion="-10.625" vertical-offset="0" max-vertical-offset="495">
-          <folding />
-        </state>
+        <state line="17" column="105" selection-start="736" selection-end="736" vertical-scroll-proportion="-10.625" vertical-offset="0" max-vertical-offset="495" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/views/category.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="8" selection-start="690" selection-end="796" vertical-scroll-proportion="0.41450778" vertical-offset="0" max-vertical-offset="579">
-          <folding />
-        </state>
+        <state line="16" column="8" selection-start="690" selection-end="796" vertical-scroll-proportion="0.41450778" vertical-offset="0" max-vertical-offset="579" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/views/currency.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="87" selection-start="650" selection-end="650" vertical-scroll-proportion="0.41450778" vertical-offset="0" max-vertical-offset="579">
+        <state line="16" column="87" selection-start="650" selection-end="650" vertical-scroll-proportion="0.41450778" vertical-offset="0" max-vertical-offset="579" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/views/update/update-currency.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="104" selection-start="774" selection-end="774" vertical-scroll-proportion="0.44041452" vertical-offset="0" max-vertical-offset="579" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/views/new/new-record.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="60" selection-start="501" selection-end="501" vertical-scroll-proportion="0.37102473" vertical-offset="0" max-vertical-offset="645" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/views/update/update-record.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="80" selection-start="962" selection-end="962" vertical-scroll-proportion="0.5565371" vertical-offset="0" max-vertical-offset="645" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/views/new/new-category.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="128" selection-start="1307" selection-end="1307" vertical-scroll-proportion="-15.0" vertical-offset="60" max-vertical-offset="660">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/application.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="307" column="20" selection-start="8470" selection-end="8470" vertical-scroll-proportion="0.0" vertical-offset="2375" max-vertical-offset="5985">
           <folding />
         </state>
       </provider>
@@ -624,36 +628,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="14" column="25" selection-start="508" selection-end="508" vertical-scroll-proportion="0.3626943" vertical-offset="0" max-vertical-offset="579">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/views/update/update-currency.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="104" selection-start="774" selection-end="774" vertical-scroll-proportion="0.44041452" vertical-offset="0" max-vertical-offset="579">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/views/new/new-record.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="60" selection-start="501" selection-end="501" vertical-scroll-proportion="0.37102473" vertical-offset="0" max-vertical-offset="645">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/views/update/update-record.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="80" selection-start="962" selection-end="962" vertical-scroll-proportion="0.5565371" vertical-offset="0" max-vertical-offset="645">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/application.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="307" column="20" selection-start="8470" selection-end="8470" vertical-scroll-proportion="0.46932006" vertical-offset="4322" max-vertical-offset="5985">
-          <folding>
-            <marker date="1398173747068" expanded="true" signature="6545:8582" placeholder="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
