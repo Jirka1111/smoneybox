@@ -45,6 +45,12 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
             controller  : 'CurrencyCtrl'
         })
 
+        .state('auth', {
+            url: '/auth',
+            templateUrl : '/views/auth.html',
+            controller  : 'AuthCtrl'
+        })
+
         .state('settings', {
             url: '/settings',
             templateUrl : '/views/settings.html',
@@ -389,5 +395,36 @@ app.controller('SettingsCtrl', function($scope) {
     $scope.message = 'Settings';
 });
 
+app.controller('AuthCtrl', function($scope, $ionicModal, $firebase, DataFactory){
+    $ionicModal.fromTemplateUrl('views/auth/register.html', function(modal) {
+        $scope.registerModal = modal;
+    }, {
+        scope: $scope,
+        animation: 'slide-in-up'
+    });
+
+    $ionicModal.fromTemplateUrl('views/auth/login.html', function(modal) {
+        $scope.loginModal = modal;
+    }, {
+        scope: $scope,
+        animation: 'slide-in-up'
+    });
+
+    $scope.registerModalShow = function() {
+        $scope.registerModal.show();
+    };
+
+    $scope.registerModalHide = function() {
+        $scope.registerModal.hide();
+    };
+
+    $scope.loginModalShow = function() {
+        $scope.loginModal.show();
+    };
+
+    $scope.loginModalHide = function() {
+        $scope.loginModal.hide();
+    };
+});
 
 
