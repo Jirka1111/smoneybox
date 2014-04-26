@@ -4,16 +4,16 @@ var accountsFire = new Firebase(url + "/" + "accounts" );
 var categoriesFire = new Firebase(url + "/" + "categories");
 var recordsFire = new Firebase(url + "/" + "records");
 var currenciesFire = new Firebase(url + "/" + "currencies");
-
+var users = new Firebase(url + "/users");
 
 // configure our routes
 app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
     $stateProvider
 
-        .state('index', {
-            url: '/index',
-            controller  : 'MainCtrl'
-        })
+//        .state('index', {
+//            url: '/index',
+//            controller  : 'MainCtrl'
+//        })
 
         .state('accounts', {
             url: '/accounts',
@@ -45,7 +45,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
             controller  : 'CurrencyCtrl'
         })
 
-        .state('auth', {
+        .state('index', {
             url: '/auth',
             templateUrl : '/views/auth.html',
             controller  : 'AuthCtrl'
@@ -56,7 +56,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
             templateUrl : '/views/settings.html',
             controller  : 'SettingsCtrl'
         });
-    $urlRouterProvider.otherwise('/index');
+    $urlRouterProvider.otherwise('/auth');
 }]);
 
 app.factory("DataFactory", function($firebase){
@@ -111,7 +111,7 @@ app.controller('AccountCtrl', function($scope, $ionicModal, $firebase, DataFacto
             description: account.description,
             currency: account.currency
         });
-        $scope.newAccountModal.hide();
+        $scope.closeNewAccount();
         account.name = "";
         account.description = "";
     };
@@ -151,7 +151,7 @@ app.controller('AccountCtrl', function($scope, $ionicModal, $firebase, DataFacto
             currency: account.currency
         });
 
-        $scope.updateAccountModal.hide();
+        $scope.closeUpdateAccount();
         account.name = "";
         account.description = "";
     };
@@ -188,7 +188,7 @@ app.controller('CategoryCtrl', function($scope, $ionicModal, $firebase, DataFact
             color: category.color,
             account: category.account
         });
-        $scope.categoryModal.hide();
+        $scope.closeNewCategory();
         category.name = "";
         category.description = "";
         category.color = "";
@@ -230,7 +230,7 @@ app.controller('CategoryCtrl', function($scope, $ionicModal, $firebase, DataFact
             account: category.account
         });
 
-        $scope.updateCategoryModal.hide();
+        $scope.closeUodateCategory();
         category.name = "";
         category.description = "";
     };
@@ -267,7 +267,7 @@ app.controller('RecordCtrl', function($scope, $ionicModal, $firebase, DataFactor
             description: record.description,
             category: record.category
         });
-        $scope.recordModal.hide();
+        $scope.closeNewRecord();
         record.amount = "";
         record.date = "";
         record.description = "";
@@ -308,7 +308,7 @@ app.controller('RecordCtrl', function($scope, $ionicModal, $firebase, DataFactor
             description: record.description,
             category: record.category
         });
-        $scope.updateRecordModal.hide();
+        $scope.closeUpdateRecord();
         record.amount = "";
         record.date = "";
         record.description = "";
@@ -343,7 +343,7 @@ app.controller('CurrencyCtrl', function($scope, $ionicModal, $firebase, DataFact
             name: currency.name,
             description: currency.description
         });
-        $scope.currencyModal.hide();
+        $scope.closeNewCurrency();
         currency.name = "";
         currency.description = "";
     };
@@ -382,7 +382,7 @@ app.controller('CurrencyCtrl', function($scope, $ionicModal, $firebase, DataFact
             description: currency.description
         });
 
-        $scope.updateCurrencyModal.hide();
+        $scope.closeUpdateRecord();
         currency.name = "";
         currency.description = "";
     };
@@ -395,7 +395,20 @@ app.controller('SettingsCtrl', function($scope) {
     $scope.message = 'Settings';
 });
 
-app.controller('AuthCtrl', function($scope, $ionicModal, $firebase, DataFactory){
+app.controller('AuthCtrl', function($scope, $rootScope, $ionicModal, $firebase, DataFactory){
+
+    var auth = new FirebaseSimpleLogin(users, function(error, user) {
+        if (error) {
+            // an error occurred while attempting login
+            console.log(error);
+        } else if (user) {
+            // user authenticated with Firebase
+            console.log('User ID: ' + user.uid + ', Provider: ' + user.provider);
+        } else {
+            // user is logged out
+        }
+    });
+
     $ionicModal.fromTemplateUrl('views/auth/register.html', function(modal) {
         $scope.registerModal = modal;
     }, {
@@ -425,6 +438,38 @@ app.controller('AuthCtrl', function($scope, $ionicModal, $firebase, DataFactory)
     $scope.loginModalHide = function() {
         $scope.loginModal.hide();
     };
+
+    $scope.newUser = function(user){
+        $scope.userEmail = user.email;
+        $scope.userPassword = user.password;
+
+        auth.createUser($scope.userEmail, $scope.userPassword, function(error, user) {
+            if (!error) {
+                console.log('User Id: ' + user.uid + ', Email: ' + $scope.userEmail);
+            }
+        });
+        $scope.registerModalHide();
+        user.email = '';
+        user.password = '';
+    };
+
+    $scope.userLogin = function(user){
+        $scope.userEmail = user.email;
+        $scope.userPassword = user.password;
+
+        auth.login('password', {
+            email: $scope.userEmail,
+            password: $scope.userPassword
+        });
+        $scope.loginModalHide();
+        user.email = '';
+        user.password = '';
+    };
+
+
+
+
+
 });
 
 

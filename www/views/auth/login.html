@@ -9,13 +9,16 @@
     <!-- Modal content area -->
     <ion-content>
 
-        <form ng-submit="register(data)">
+        <form ng-submit="useLogin(user)">
             <div class="list">
                 <label class="item item-input">
-                    <input type="text" placeholder="{{current_account.name}}" ng-model="account.name">
+                    <input type="email" placeholder="Your e-mail" ng-model="user.email">
+                </label>
+                <label class="item item-input">
+                    <input type="password" placeholder="Your password" ng-model="user.password">
                 </label>
                 <div class="padding">
-                    <button type="submit" class="button button-block button-positive">Update Account</button>
+                    <button type="submit" class="button button-block button-positive">Login</button>
                 </div>
             </div>
         </form>
