@@ -1,19 +1,20 @@
 var app = angular.module('app', ['ionic', 'firebase']);
 var url = 'https://smoneybox.firebaseio.com';
-var accountsFire = new Firebase(url + "/" + "accounts" );
-var categoriesFire = new Firebase(url + "/" + "categories");
-var recordsFire = new Firebase(url + "/" + "records");
-var currenciesFire = new Firebase(url + "/" + "currencies");
-var users = new Firebase(url + "/users");
+var accountsFire = new Firebase(url + "/accounts" );
+var categoriesFire = new Firebase(url + "/categories");
+var recordsFire = new Firebase(url + "/records");
+var currenciesFire = new Firebase(url + "/currencies");
+var usersFire = new Firebase(url + "/users");
+var usersAuth = new Firebase(url);
 
 // configure our routes
 app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
     $stateProvider
 
-//        .state('index', {
-//            url: '/index',
-//            controller  : 'MainCtrl'
-//        })
+        .state('index', {
+            url: '/index',
+            controller  : 'MainCtrl'
+        })
 
         .state('accounts', {
             url: '/accounts',
@@ -45,7 +46,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
             controller  : 'CurrencyCtrl'
         })
 
-        .state('index', {
+        .state('auth', {
             url: '/auth',
             templateUrl : '/views/auth.html',
             controller  : 'AuthCtrl'
@@ -56,7 +57,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
             templateUrl : '/views/settings.html',
             controller  : 'SettingsCtrl'
         });
-    $urlRouterProvider.otherwise('/auth');
+    $urlRouterProvider.otherwise('/index');
 }]);
 
 app.factory("DataFactory", function($firebase){
@@ -72,6 +73,9 @@ app.factory("DataFactory", function($firebase){
         ,
         currencies:
             currencies = $firebase(currenciesFire)
+        ,
+        users:
+            users = $firebase(usersFire)
     }
 });
 
@@ -395,12 +399,19 @@ app.controller('SettingsCtrl', function($scope) {
     $scope.message = 'Settings';
 });
 
-app.controller('AuthCtrl', function($scope, $rootScope, $ionicModal, $firebase, DataFactory){
+app.controller('AuthCtrl', function($scope, $ionicModal, $firebase, DataFactory){
 
-    var auth = new FirebaseSimpleLogin(users, function(error, user) {
+    var auth = new FirebaseSimpleLogin(usersAuth, function(error, user) {
         if (error) {
             // an error occurred while attempting login
             console.log(error);
+            switch(error.code) {
+                case 'EMAIL_TAKEN': alert('E-mail is already taken')
+                case 'INVALID_EMAIL': alert('Invalid e-mail')
+                case 'INVALID_PASSWORD':alert('Invalid password')
+                case 'UNKNOWN_ERROR': alert('Unknown error, please contact us')
+                default:
+            }
         } else if (user) {
             // user authenticated with Firebase
             console.log('User ID: ' + user.uid + ', Provider: ' + user.provider);
@@ -445,31 +456,43 @@ app.controller('AuthCtrl', function($scope, $rootScope, $ionicModal, $firebase, 
 
         auth.createUser($scope.userEmail, $scope.userPassword, function(error, user) {
             if (!error) {
-                console.log('User Id: ' + user.uid + ', Email: ' + $scope.userEmail);
+                console.log('User UID: ' + user.uid + ', Email: ' + $scope.userEmail + ', User ID: ' + user.id + ', User Password: ' + $scope.userPassword);
             }
+            $scope.userId = user.id;
+            $scope.userUid = user.uid;
+
+
+            $scope.addUserToFirebase($scope.userEmail, $scope.userUid, $scope.userId);
+
         });
+
         $scope.registerModalHide();
         user.email = '';
         user.password = '';
     };
 
+
+    $scope.addUserToFirebase = function(userEmail, userUid, userId){
+        $scope.users.$add({
+            email: userEmail,
+            userUid: userUid,
+            userId: userId
+        });
+    };
+
+
     $scope.userLogin = function(user){
-        $scope.userEmail = user.email;
-        $scope.userPassword = user.password;
+        $scope.userLoginEmail = user.email;
+        $scope.userLoginPassword = user.password;
 
         auth.login('password', {
-            email: $scope.userEmail,
-            password: $scope.userPassword
+            email: user.email,
+            password: user.password
         });
         $scope.loginModalHide();
         user.email = '';
         user.password = '';
     };
 
-
-
-
-
+    $scope.users = DataFactory.users;
 });
-
-
