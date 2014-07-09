@@ -12,6 +12,9 @@
         <form ng-submit="newUser(user)">
             <div class="list">
                 <label class="item item-input">
+                    <input type="text" placeholder="Type your username" ng-model="user.username">
+                </label>
+                <label class="item item-input">
                     <input type="text" placeholder="Type your e-mail" ng-model="user.email">
                 </label>
                 <label class="item item-input">
