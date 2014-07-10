@@ -230,7 +230,7 @@ app.controller('CategoryCtrl', function($scope, $ionicModal, $firebase, DataFact
             account: category.account
         });
 
-        $scope.closeUodateCategory();
+        $scope.closeUpdateCategory();
         category.name = "";
         category.description = "";
     };
@@ -501,6 +501,7 @@ app.controller('AuthCtrl', function($scope, $ionicModal, $firebase, DataFactory)
     };
 
     $scope.userLogout = function(){
+        debugger
         auth.logout();
         console.log('LOGOUT USER');
         window.localStorage.removeItem("user_id");
