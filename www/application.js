@@ -431,6 +431,13 @@ app.controller('AuthCtrl', function($scope, $ionicModal, $firebase, DataFactory)
         animation: 'slide-in-up'
     });
 
+    $ionicModal.fromTemplateUrl('views/auth/remove-user.html', function(modal) {
+        $scope.removeUserModal = modal;
+    }, {
+        scope: $scope,
+        animation: 'slide-in-up'
+    });
+
     $scope.registerModalShow = function() {
         $scope.registerModal.show();
     };
@@ -445,6 +452,14 @@ app.controller('AuthCtrl', function($scope, $ionicModal, $firebase, DataFactory)
 
     $scope.loginModalHide = function() {
         $scope.loginModal.hide();
+    };
+
+    $scope.removeUserModalShow = function() {
+        $scope.removeUserModal.show();
+    };
+
+    $scope.removeUserModalHide = function() {
+        $scope.removeUserModal.hide();
     };
 
     $scope.newUser = function(user){
@@ -501,9 +516,18 @@ app.controller('AuthCtrl', function($scope, $ionicModal, $firebase, DataFactory)
     };
 
     $scope.userLogout = function(){
-        debugger
         auth.logout();
         console.log('LOGOUT USER');
+        window.localStorage.removeItem("user_id");
+    };
+
+    $scope.removeUser = function(user){
+        auth.removeUser(user.email, user.password, function(error, success) {
+            if (!error) {
+                console.log('Account deleted successfully');
+            }
+        });
+        $scope.removeUserModalHide();
         window.localStorage.removeItem("user_id");
     };
 
