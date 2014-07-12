@@ -1,6 +1,5 @@
 var app = angular.module('app', ['ionic', 'firebase']);
 var url = 'https://smoneybox.firebaseio.com';
-var usersAuth = new Firebase(url);
 
 
 // configure our routes
@@ -87,8 +86,6 @@ app.controller('MainCtrl', function($scope, $ionicSideMenuDelegate) {
 
 app.controller('AccountCtrl', function($scope, $ionicModal, $firebase, DataFactory) {
 
-    $scope.accounts = [];
-
     // Create and load the Modal
     $ionicModal.fromTemplateUrl('views/new/new-account.html', function(modal) {
         $scope.newAccountModal = modal;
@@ -162,8 +159,6 @@ app.controller('AccountCtrl', function($scope, $ionicModal, $firebase, DataFacto
 
 
 app.controller('CategoryCtrl', function($scope, $ionicModal, $firebase, DataFactory) {
-
-    $scope.categories = [];
 
     // Create and load the Modal
     $ionicModal.fromTemplateUrl('views/new/new-category.html', function(modal) {
@@ -242,8 +237,6 @@ app.controller('CategoryCtrl', function($scope, $ionicModal, $firebase, DataFact
 
 app.controller('RecordCtrl', function($scope, $ionicModal, $firebase, DataFactory) {
 
-    $scope.records = [];
-
     // Create and load the Modal
     $ionicModal.fromTemplateUrl('views/new/new-record.html', function(modal) {
         $scope.recordModal = modal;
@@ -320,8 +313,6 @@ app.controller('RecordCtrl', function($scope, $ionicModal, $firebase, DataFactor
 
 app.controller('CurrencyCtrl', function($scope, $ionicModal, $firebase, DataFactory) {
 
-    $scope.currencies = [];
-
     // Create and load the Modal
     $ionicModal.fromTemplateUrl('views/new/new-currency.html', function(modal) {
         $scope.currencyModal = modal;
@@ -397,7 +388,7 @@ app.controller('SettingsCtrl', function($scope) {
 
 app.controller('AuthCtrl', function($scope, $ionicModal, $firebase, DataFactory){
 
-    var auth = new FirebaseSimpleLogin(usersAuth, function(error, user) {
+    var auth = new FirebaseSimpleLogin(new Firebase(url), function(error, user) {
         if (error) {
             // an error occurred while attempting login
             console.log(error);
@@ -405,15 +396,13 @@ app.controller('AuthCtrl', function($scope, $ionicModal, $firebase, DataFactory)
                 case 'EMAIL_TAKEN': alert('E-mail is already taken')
                 case 'INVALID_EMAIL': alert('Invalid e-mail')
                 case 'INVALID_PASSWORD': alert('Invalid password')
-                case 'UNKNOWN_ERROR': alert('Unknown error, please contact us')
-                default:
             }
         } else if (user) {
             // user authenticated with Firebase
             console.log('User ID: ' + user.uid + ', Provider: ' + user.provider);
             window.localStorage.setItem('user_id', user.id);
         } else {
-            // user is logged out
+            alert("You are not logged in!");
         }
     });
 
