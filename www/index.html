@@ -5,7 +5,7 @@
 
 <head>
     <!-- CSS -->
-    <link rel="stylesheet" href="stylesheets/ionic2.css" />
+    <link rel="stylesheet" href="stylesheets/ionic.css" />
     <link rel="stylesheet" href="stylesheets/ionicons.css"/>
     <link rel="stylesheet" href="stylesheets/application.css" />
 
@@ -14,8 +14,9 @@
     <script src="components/steroids-js/steroids.js"></script>
     <script type='text/javascript' src='http://code.jquery.com/jquery-1.8.2.js'></script>
     <script type='text/javascript' src="http://bgrins.github.com/spectrum/spectrum.js"></script>
-    <script src="javascripts/ionic.bundle2.js"></script>
+
     <script src="javascripts/firebase.js"></script>
+    <script src="javascripts/ionic.bundle.js"></script>
     <script src="javascripts/angularfire.min.js"></script>
     <script src="javascripts/firebase-simple-login.js"></script>
     <script src="application.js"></script>
@@ -61,6 +62,11 @@
             </ion-list>
         </ion-side-menu>
     </ion-side-menus>
+
+    <ion-content>
+{{title}}
+    </ion-content>
+
 
     <ion-footer-bar class="bar-light">
         <div class="tabs tabs-icon-top">

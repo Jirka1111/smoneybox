@@ -388,23 +388,27 @@ app.controller('SettingsCtrl', function($scope) {
 
 app.controller('AuthCtrl', function($scope, $ionicModal, $firebase, DataFactory){
 
-    var auth = new FirebaseSimpleLogin(new Firebase(url), function(error, user) {
-        if (error) {
-            // an error occurred while attempting login
-            console.log(error);
-            switch(error.code) {
-                case 'EMAIL_TAKEN': alert('E-mail is already taken')
-                case 'INVALID_EMAIL': alert('Invalid e-mail')
-                case 'INVALID_PASSWORD': alert('Invalid password')
+    $scope.authUser = function(){
+        var auth = new FirebaseSimpleLogin(new Firebase(url), function(error, user) {
+            if (error) {
+                // an error occurred while attempting login
+                console.log(error);
+                switch(error.code) {
+                    case 'EMAIL_TAKEN': alert('E-mail is already taken')
+                    case 'INVALID_EMAIL': alert('Invalid e-mail')
+                    case 'INVALID_PASSWORD': alert('Invalid password')
+                }
+            } else if (user) {
+                // user authenticated with Firebase
+                console.log('User ID: ' + user.uid + ', Provider: ' + user.provider);
+                window.localStorage.setItem('user_id', user.id);
+//                alert(user.id);
+            } else {
+//                alert("You are not logged in!");
             }
-        } else if (user) {
-            // user authenticated with Firebase
-            console.log('User ID: ' + user.uid + ', Provider: ' + user.provider);
-            window.localStorage.setItem('user_id', user.id);
-        } else {
-            alert("You are not logged in!");
-        }
-    });
+        });
+        return auth;
+    };
 
     $ionicModal.fromTemplateUrl('views/auth/register.html', function(modal) {
         $scope.registerModal = modal;
@@ -456,14 +460,14 @@ app.controller('AuthCtrl', function($scope, $ionicModal, $firebase, DataFactory)
         $scope.userPassword = user.password;
         $scope.username = user.username;
 
-        auth.createUser($scope.userEmail, $scope.userPassword, function(error, user) {
+        $scope.authUser().createUser($scope.userEmail, $scope.userPassword, function(error, user) {
             if (!error) {
                 console.log('User UID: ' + user.uid + ', Email: ' + $scope.userEmail + ', User ID: ' + user.id + ', User Password: ' + $scope.userPassword);
             }
             $scope.userId = user.id;
             $scope.userUid = user.uid;
 
-            $scope.addUserToFirebase($scope.username, $scope.userEmail, $scope.userUid, $scope.userId);
+//            $scope.addUserToFirebase($scope.username, $scope.userEmail, $scope.userUid, $scope.userId);
 
         });
 
@@ -473,31 +477,30 @@ app.controller('AuthCtrl', function($scope, $ionicModal, $firebase, DataFactory)
         user.username = '';
     };
 
-    $scope.addUserToFirebase = function(username, userEmail, userUid, userId){
-
-        child = $scope.users.$child(userId)
-        child.set({
-            username: username,
-            email: userEmail,
-            userUid: userUid,
-            userId: userId
-        })
-//        $scope.users.$add({
+//    $scope.addUserToFirebase = function(username, userEmail, userUid, userId){
+//
+//        child = $scope.users.$child(userId)
+//        child.set({
 //            username: username,
 //            email: userEmail,
 //            userUid: userUid,
 //            userId: userId
-//        });
-    };
+//        })
+////        $scope.users.$add({
+////            username: username,
+////            email: userEmail,
+////            userUid: userUid,
+////            userId: userId
+////        });
+//    };
 
     $scope.userLogin = function(user){
         $scope.userLoginEmail = user.email;
         $scope.userLoginPassword = user.password;
 
-        auth.login('password', {
+        $scope.authUser().login('password', {
             email: $scope.userLoginEmail,
-            password: $scope.userLoginPassword,
-            rememberMe: true
+            password: $scope.userLoginPassword
         });
         $scope.loginModalHide();
         user.email = '';
@@ -505,13 +508,13 @@ app.controller('AuthCtrl', function($scope, $ionicModal, $firebase, DataFactory)
     };
 
     $scope.userLogout = function(){
-        auth.logout();
+        $scope.authUser().logout();
         console.log('LOGOUT USER');
         window.localStorage.removeItem("user_id");
     };
 
     $scope.removeUser = function(user){
-        auth.removeUser(user.email, user.password, function(error, success) {
+        $scope.authUser().removeUser(user.email, user.password, function(error, success) {
             if (!error) {
                 console.log('Account deleted successfully');
             }
